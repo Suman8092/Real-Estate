@@ -35,12 +35,10 @@ const path = require('node:path');
         assert(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1), `${width}/${file}: overflow`);
         const header = await page.locator('body > header').evaluate(element => ({ height: element.clientHeight, bg: getComputedStyle(element).backgroundColor }));
         assert.equal(header.height, width < 640 ? 68 : 84, `${width}/${file}: header geometry`);
-        assert.equal(header.bg, 'rgb(255, 255, 255)', `${file}: pure white header`);
-        assert.equal(await page.locator('body > footer').evaluate(element => getComputedStyle(element).backgroundColor), 'rgb(255, 255, 255)', `${file}: pure white footer`);
+        assert.equal(header.bg, file === 'index.html' ? 'rgb(255, 255, 255)' : 'rgb(255, 254, 251)', `${file}: page-specific header preserved`);
+        assert.equal(await page.locator('body > footer').evaluate(element => getComputedStyle(element).backgroundColor), file === 'index.html' ? 'rgb(255, 255, 255)' : 'rgb(255, 254, 251)', `${file}: page-specific footer preserved`);
         if (file !== 'index.html') {
-          const sections = await page.locator('main .brand-section').evaluateAll(elements => elements.map(element => getComputedStyle(element).backgroundColor));
-          assert.equal(sections.length, 2, `${file}: two existing content groups`);
-          sections.forEach((color, index) => assert.equal(color, index % 2 ? 'rgb(0, 0, 0)' : 'rgb(255, 255, 255)', `${file}: alternating body sections`));
+          assert.equal(await page.locator('main .brand-section, main .brand-shell').count(), 0, `${file}: previous page structure restored`);
         }
         assert.equal(await page.locator('#nav-menu a[aria-current="page"]').count(), 1, `${file}: desktop active link count`);
         if (categories.includes(file)) {

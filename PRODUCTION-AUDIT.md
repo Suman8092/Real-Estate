@@ -1,5 +1,6 @@
 # Production preparation audit
 
+**Current scope:** Only the homepage uses the new black-and-white design. The other eight pages have been restored to their layouts and styles from commit `388c3a7`, before the site-wide redesign, using isolated styles in `css/legacy/`. The separately requested footer logo, single email and combined About paragraph are retained. New-palette browser checks apply only to the homepage.
 Prepared locally on 3 November 2026. No deployment has been performed and no production domain or provider has been assumed.
 
 ## Implemented

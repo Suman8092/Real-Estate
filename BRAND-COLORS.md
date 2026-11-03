@@ -1,5 +1,6 @@
 # Exact logo colors and their application
 
+**Current scope:** Only the homepage uses the new black-and-white design. The other eight pages have been restored to their layouts and styles from commit `388c3a7`, before the site-wide redesign, using isolated styles in `css/legacy/`. The separately requested footer logo, single email and combined About paragraph are retained. New-palette browser checks apply only to the homepage.
 The source is the existing **Premium Property Depot LLP** logo at `images/premium-property-depot-logo.png` (971 x 257 pixels). The actual image has shaded gold artwork and anti-aliased edges, rather than a single flat gold. The values below are exact existing pixel colors selected by frequency; they are not claimed to be an external official brand guide.
 
 | Role | Exact HEX | Fully opaque pixel count | Sample coordinate (x, y) | Application |
@@ -33,7 +34,7 @@ These pairings exceed 4.5:1 for normal-size text. The lighter sampled gold is us
 
 ## Section sequence and originality
 
-The eight homepage body sections follow **white, black, white, black, white, black, white, black**. Each other page groups its existing introduction into a white section and its existing project/contact content into a black section. The shared white header and footer have global navigation roles and are not counted as body sections. Cards remain part of their containing section, not additional numbered sections.
+The eight homepage body sections follow **white, black, white, black, white, black, white, black**. Other pages retain their previous section layouts and colors. The shared white header and footer have global navigation roles and are not counted as body sections. Cards remain part of their containing section, not additional numbered sections.
 
 The visual identity uses an image-led split hero, left-aligned serif headings, a featured horizontal project presentation, paired open project rows, an asymmetric gallery, thin sampled-gold rules and a numbered process layout. Existing business copy, project facts, property images, navigation destinations and form behavior are retained. No complete reference-site layout, new marketing claims, inventory or dummy interactions are introduced.
 

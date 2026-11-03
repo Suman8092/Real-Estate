@@ -1,6 +1,7 @@
 # Premium Properties
 
-Multipage real estate website with verified Sarira Demo2 content and imagery. The homepage has eight alternating pure-white/pure-black sections; other pages have a white introduction and black content area. The shared footer is pure white. An image-led split hero, an open featured-project row and an asymmetric gallery give the site its own composition. Existing page names and property categories are retained.
+**Current scope:** Only the homepage uses the new black-and-white design. The other eight pages have been restored to their layouts and styles from commit `388c3a7`, before the site-wide redesign, using isolated styles in `css/legacy/`. The separately requested footer logo, single email and combined About paragraph are retained. New-palette browser checks apply only to the homepage.
+Multipage real estate website with verified Sarira Demo2 content and imagery. The homepage has eight alternating pure-white/pure-black sections; other pages retain their previous layouts and styling. The shared footer is pure white. An image-led split hero, an open featured-project row and an asymmetric gallery give the site its own composition. Existing page names and property categories are retained.
 
 ## Local development
 
