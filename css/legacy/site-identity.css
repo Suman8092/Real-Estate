@@ -18,8 +18,8 @@ body>header #nav-menu .group a:hover,body>header #nav-menu .group a.active{backg
 /* Keep every drawer state legible against its charcoal background. */
 #mobile-menu{color:#eeede8!important;height:100dvh;max-height:100dvh;border-color:#ffffff26!important}
 #mobile-menu a:not(.active):not(.btn-yellow),#mobile-menu .mobile-submenu-toggle{color:#eeede8!important}
-#mobile-menu>div:first-child span{color:var(--pp-gold-light)!important}
-#mobile-menu>div:first-child img{background:#fffefb;outline:3px solid #fffefb;border-radius:2px}
+#mobile-menu>div:first-child{background:#fffefb}
+#mobile-menu>div:first-child img{width:152px;height:40px;object-fit:contain;background:transparent;outline:none;border-radius:0}
 #mobile-menu .border-gray-100{border-color:#ffffff26!important}
 #mobile-menu #menu-close{background:#fffefb;color:var(--pp-ink)!important}
 #mobile-menu a.btn-yellow,#mobile-menu a.btn-yellow.active{color:#fff!important;background:var(--pp-gold)!important}

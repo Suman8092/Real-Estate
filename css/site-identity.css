@@ -22,8 +22,8 @@ body>header #nav-menu .group a:hover,body>header #nav-menu .group a.active{backg
 #mobile-menu a:not(.btn-yellow),#mobile-menu .mobile-submenu-toggle{color:var(--brand-white)!important;border-radius:0!important}
 #mobile-menu a.active:not(.btn-yellow){color:var(--brand-highlight)!important;background:var(--brand-black)!important;outline:1px solid var(--brand-highlight)}
 #mobile-menu a:not(.btn-yellow):hover,#mobile-menu .mobile-submenu-toggle:hover{background:var(--brand-white)!important;color:var(--brand-black)!important}
-#mobile-menu>div:first-child span{color:var(--brand-highlight)!important}
-#mobile-menu>div:first-child img{background:var(--brand-white);outline:3px solid var(--brand-white);border-radius:0}
+#mobile-menu>div:first-child{background:var(--brand-white)}
+#mobile-menu>div:first-child img{width:152px;height:40px;object-fit:contain;background:transparent;outline:none;border-radius:0}
 #mobile-menu .border-gray-100,#mobile-menu .border-blue-800{border-color:var(--brand-highlight)!important}
 #mobile-menu #menu-close{background:var(--brand-white);color:var(--brand-black)!important}
 #mobile-menu a.btn-yellow,#mobile-menu a.btn-yellow.active{color:var(--brand-white)!important;background:var(--brand-gold)!important}
