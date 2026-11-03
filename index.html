@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Premium Properties | Your Property, Our Priority.</title>
+  <meta name="description" content="Compare real estate projects by type, location, and price. Explore residential and commercial property options by location." />
+  <meta name="keywords" content="Vrindaan, Lifestyle Central, Casa Corbett, Anantara, Vantara Heritage, Aurya City, BNX Group" />
+  <meta name="author" content="Premium Properties" />
+
+  <link rel="icon" type="image/png" href="images/peminum_logo_-png.png" />
+
+  <!-- Google Fonts: Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome 6.4.0 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/utilities.css" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/custom.css" />
+  <link rel="stylesheet" href="css/header-branding.css" />
+  <link rel="stylesheet" href="css/site-identity.css" />
+
+  <!-- production-seo:start -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Premium Properties" />
+  <meta property="og:title" content="Premium Properties | Your Property, Our Priority." />
+  <meta property="og:description" content="Compare real estate projects by type, location, and price. Explore residential and commercial property options by location." />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta property="og:image:alt" content="Premium Property Depot LLP logo" />
+  <!-- production-seo:end -->
+</head>
+<body class="bg-gray-100 antialiased font-sans flex flex-col min-h-screen text-gray-800">
+
+  <!-- HEADER -->
+  <header class="sticky top-0 z-50 bg-white text-gray-800 shadow-sm border-b border-gray-100" role="banner">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex items-center justify-between">
+<!-- LOGO -->
+<div class="flex items-center gap-2 sm:gap-3 site-header-brand"><a aria-label="Premium Properties — Home" class="site-header-brand-link" href="index.html"><img alt="Premium Property Depot logo" class="site-header-brand-image" decoding="async" fetchpriority="high" height="257" src="images/premium-property-depot-logo.png" width="971"/></a></div>
+<!-- MOBILE TOGGLE BUTTON -->
+<button aria-label="Toggle navigation menu" class="lg:hidden p-2 rounded-md text-gray-700 hover:text-blue-900 hover:bg-gray-100 transition-colors focus:outline-none focus:ring-2 focus:ring-yellow-400" id="menu-toggle">
+<svg class="w-7 h-7" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<!-- DESKTOP NAVIGATION -->
+<nav aria-label="Main navigation" class="hidden lg:flex items-center space-x-1 xl:space-x-2" id="nav-menu" role="navigation">
+<a aria-current="page" class="px-2 py-2 text-sm font-semibold text-blue-900 hover:text-blue-900 transition-colors nav-link active" href="index.html">Home</a>
+<a class="px-2 py-2 text-sm font-medium text-gray-700 hover:text-blue-900 transition-colors nav-link" href="about.html">About Us</a>
+<!-- PROPERTIES DROPDOWN -->
+<div class="group relative inline-block">
+<button aria-expanded="false" aria-haspopup="true" class="flex items-center gap-1 px-2 py-2 text-sm font-medium text-gray-700 hover:text-blue-900 transition-colors nav-link" type="button">
+            Properties
+            <svg class="w-4 h-4 transition-transform duration-200 group-hover:rotate-180 text-gray-500 group-hover:text-blue-900" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<!-- Dropdown Panel -->
+<div class="absolute top-full left-0 pt-2 w-48 opacity-0 invisible group-hover:visible group-hover:opacity-100 transition-all duration-300 translate-y-2 group-hover:translate-y-0 z-50">
+<div class="bg-white rounded-lg shadow-xl border border-gray-100 p-2 flex flex-col gap-1">
+<a class="block px-4 py-2 text-sm font-medium text-gray-700 rounded-md hover:bg-blue-50 hover:text-blue-900 transition-colors" href="residential.html">Residential</a>
+<a class="block px-4 py-2 text-sm font-medium text-gray-700 rounded-md hover:bg-blue-50 hover:text-blue-900 transition-colors" href="commercial.html">Commercial</a>
+<a class="block px-4 py-2 text-sm font-medium text-gray-700 rounded-md hover:bg-blue-50 hover:text-blue-900 transition-colors" href="farmhouses.html">Farm Houses</a>
+<a class="block px-4 py-2 text-sm font-medium text-gray-700 rounded-md hover:bg-blue-50 hover:text-blue-900 transition-colors" href="vacant-plots.html">Vacant Plots</a>
+<a class="block px-4 py-2 text-sm font-medium text-gray-700 rounded-md hover:bg-blue-50 hover:text-blue-900 transition-colors" href="industrial.html">Industrial</a>
+</div>
+</div>
+</div>
+<!-- GALLERY -->
+<a class="px-2 py-2 text-sm font-medium text-gray-700 hover:text-blue-900 transition-colors nav-link" href="gallery.html">Gallery</a>
+<!-- CONTACT CTA BUTTON -->
+<div class="pl-2 xl:pl-4">
+<a class="inline-flex items-center justify-center px-5 py-2 text-sm font-bold text-blue-900 bg-yellow-400 rounded-full shadow-md hover:bg-yellow-300 hover:shadow-lg transition-all duration-300 btn-yellow" href="contact.html">
+            Contact
+          </a>
+</div>
+</nav>
+</div>
+</header>
+
+ <!-- MOBILE MENU OVERLAY -->
+<div class="fixed inset-0 bg-black/60 backdrop-blur-sm z-40 hidden opacity-0 transition-opacity duration-300" id="mobile-overlay"></div>
+<!-- MOBILE MENU (SLIDE-IN RIGHT) -->
+<div class="fixed top-0 right-0 h-full w-72 max-w-full bg-white text-gray-800 z-50 transform translate-x-full transition-transform duration-300 shadow-2xl flex flex-col lg:hidden border-l border-gray-100" id="mobile-menu">
+<div class="flex items-center justify-between p-4 border-b border-gray-100">
+<div class="flex items-center gap-2">
+<img loading="lazy" decoding="async" width="640" height="430" alt="Logo" class="h-6 w-auto object-contain" src="images/premium-property-depot-logo.png"/>
+<span class="text-lg font-bold text-blue-900">Menu</span>
+</div>
+<button aria-label="Close menu" class="p-2 rounded-full text-gray-500 hover:text-gray-800 hover:bg-gray-100 transition-colors" id="menu-close">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+<div class="flex-1 overflow-y-auto p-4 space-y-2">
+<a aria-current="page" class="block px-4 py-3 text-base font-semibold text-blue-900 bg-blue-50/70 rounded-lg active" href="index.html">Home</a>
+<!-- MOBILE: ABOUT US DROPDOWN -->
+<a class="block px-4 py-3 text-base font-medium text-gray-700 hover:bg-gray-100 hover:text-blue-900 transition-colors" href="about.html">About Us</a>
+<!-- MOBILE: PROPERTIES DROPDOWN -->
+<div>
+<button aria-expanded="false" aria-haspopup="true" class="mobile-submenu-toggle w-full flex justify-between items-center px-4 py-3 text-base font-medium text-gray-700 rounded-lg hover:bg-gray-100 hover:text-blue-900 transition-colors" type="button">
+          Properties
+          <svg class="w-4 h-4 transition-transform duration-200" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<div class="mobile-submenu flex-col gap-1 pl-4 pr-2 pb-2 mt-1 hidden">
+<a class="block px-4 py-2 text-sm text-gray-600 rounded-lg hover:bg-blue-50 hover:text-blue-900" href="residential.html">Residential</a>
+<a class="block px-4 py-2 text-sm text-gray-600 rounded-lg hover:bg-blue-50 hover:text-blue-900" href="commercial.html">Commercial</a>
+<a class="block px-4 py-2 text-sm text-gray-600 rounded-lg hover:bg-blue-50 hover:text-blue-900" href="farmhouses.html">Farm Houses</a>
+<a class="block px-4 py-2 text-sm text-gray-600 rounded-lg hover:bg-blue-50 hover:text-blue-900" href="vacant-plots.html">Vacant Plots</a>
+<a class="block px-4 py-2 text-sm text-gray-600 rounded-lg hover:bg-blue-50 hover:text-blue-900" href="industrial.html">Industrial</a>
+</div>
+</div>
+<a class="block px-4 py-3 text-base font-medium text-gray-700 hover:bg-gray-100 hover:text-blue-900 transition-colors" href="gallery.html">Gallery</a>
+</div>
+<div class="p-4 border-t border-gray-100">
+<a class="flex items-center justify-center w-full px-4 py-3 text-base font-bold text-blue-900 bg-yellow-400 rounded-xl shadow-md hover:bg-yellow-300 transition-colors btn-yellow" href="contact.html">
+        Contact Us
+      </a>
+</div>
+</div>
+
+
+  <!-- MAIN CONTENT CONTAINER -->
+  <main id="homepage-content" class="flex-grow"><template shadowrootmode="open"><div class="hp-home"><section class="hp-hero"><div class="hp-hero-frame"><p class="hp-eyebrow">Find Your Next Property Opportunity</p><h1>Your Property, Our Priority.</h1><a class="hp-button" href="#projects">Explore Projects</a></div></section><section class="hp-section hp-featured"><h2 class="hp-section-title">Featured Properties</h2><p class="hp-section-intro">Compare real estate projects by type, location, and price.</p><div class="hp-feature-grid"><a class="hp-feature" href="residential.html#project-vrindaan"><div class="hp-feature-image"><img src="images/1.jpg" alt="Vrindaan" width="640" height="430" loading="lazy" decoding="async" /></div><div class="hp-feature-caption"><h3>Vrindaan</h3><p>Raal Road, Vrindavan</p></div></a><a class="hp-feature" href="commercial.html#project-lifestyle-central"><div class="hp-feature-image"><img src="images/lifestyle-central-updated-cover.webp" alt="Lifestyle Central" width="640" height="430" loading="lazy" decoding="async" /></div><div class="hp-feature-caption"><h3>Lifestyle Central</h3><p>Delta 2, Greater Noida, UP</p></div></a><a class="hp-feature" href="farmhouses.html#project-casa-corbett"><div class="hp-feature-image"><img src="images/casa-corbett-updated-cover.webp" alt="Casa Corbett" width="640" height="430" loading="lazy" decoding="async" /></div><div class="hp-feature-caption"><h3>Casa Corbett</h3><p>Kalagarh, Uttar Pradesh</p></div></a><a class="hp-feature" href="vacant-plots.html#project-anantara"><div class="hp-feature-image"><img src="images/anantara-updated-07.webp" alt="Anantara" width="640" height="430" loading="lazy" decoding="async" /></div><div class="hp-feature-caption"><h3>Anantara</h3><p>Near Kalagarh Dam, Amangarh region</p></div></a></div></section><section class="hp-section hp-about"><div class="hp-framed-panel"><p class="hp-eyebrow">BUILDING TRUST. DELIVERING VALUE.</p><h2 class="hp-section-title">Why Choose Us for Your Property</h2><p class="hp-section-intro">We bring project information and property options together to help you make informed decisions.</p><ul class="hp-benefits"><li>Clear Project Details</li><li>Diverse Property Options</li><li>Transparent Pricing</li><li>Dedicated Buyer Support</li></ul><a class="hp-text-link" href="about.html">Explore More</a></div></section><section class="hp-section hp-overview"><div class="hp-overview-text"><h2 class="hp-section-title">Designed for Better Property Decisions</h2><p>Explore thoughtfully planned developments with clear layouts, well-defined plot dimensions, and payment options to help you choose with greater clarity.</p><h3>Well-Planned Layouts</h3><p>Review plot arrangements, internal roads, and designated open spaces.</p><h3>Plot Sizes &amp; Payment Options</h3><p>Compare available plot dimensions and payment schedules for your plans.</p></div><div class="hp-overview-image"><img src="images/vantara-heritage-overview.webp" alt="Vantara Heritage" width="800" height="640" loading="lazy" /></div></section><section class="hp-section hp-portfolio" id="projects"><h2 class="hp-section-title">Explore Our Featured Real Estate Projects</h2><div class="hp-filters" role="group" aria-label="Featured Properties"><button type="button" class="hp-filter active" data-filter="all" aria-pressed="true">All Properties</button><button type="button" class="hp-filter" data-filter="residential" aria-pressed="false">Residential</button><button type="button" class="hp-filter" data-filter="commercial" aria-pressed="false">Commercial</button><button type="button" class="hp-filter" data-filter="farmhouse" aria-pressed="false">Farmhouse</button><button type="button" class="hp-filter" data-filter="hotel" aria-pressed="false">Hotel</button></div><div class="hp-project-grid"><article class="hp-project" data-categories="residential" id="home-vrindaan"><a class="hp-project-image" href="residential.html#project-vrindaan"><img src="images/1.jpg" alt="Vrindaan" width="640" height="430" loading="lazy" decoding="async" /></a><div class="hp-project-body"><p class="hp-project-type">Residential</p><h3>Vrindaan</h3><p class="hp-project-location">Raal Road, Vrindavan</p><p class="hp-project-description">A HOME IN THE HEART OF BRAJ</p><a class="hp-project-link" href="residential.html#project-vrindaan">Explore the project</a></div></article><article class="hp-project" data-categories="commercial hotel" id="home-lifestyle-central"><a class="hp-project-image" href="commercial.html#project-lifestyle-central"><img src="images/lifestyle-central-updated-cover.webp" alt="Lifestyle Central" width="640" height="430" loading="lazy" decoding="async" /></a><div class="hp-project-body"><p class="hp-project-type">Commercial</p><h3>Lifestyle Central</h3><p class="hp-project-location">Delta 2, Greater Noida, UP</p><p class="hp-project-description">Boutique retail. Luxury hotel suites. Rooftop leisure. One remarkable address in Greater Noida.</p><a class="hp-project-link" href="commercial.html#project-lifestyle-central">Explore the project</a></div></article><article class="hp-project" data-categories="farmhouse" id="home-casa-corbett"><a class="hp-project-image" href="farmhouses.html#project-casa-corbett"><img src="images/casa-corbett-updated-cover.webp" alt="Casa Corbett" width="640" height="430" loading="lazy" decoding="async" /></a><div class="hp-project-body"><p class="hp-project-type">Farmhouse</p><h3>Casa Corbett</h3><p class="hp-project-location">Kalagarh, Uttar Pradesh</p><p class="hp-project-description">Resort-style holiday home living, surrounded by the beauty of nature.</p><a class="hp-project-link" href="farmhouses.html#project-casa-corbett">Explore the project</a></div></article><article class="hp-project" data-categories="farmhouse" id="home-anantara"><a class="hp-project-image" href="vacant-plots.html#project-anantara"><img src="images/anantara-updated-07.webp" alt="Anantara" width="640" height="430" loading="lazy" decoding="async" /></a><div class="hp-project-body"><p class="hp-project-type">Plots</p><h3>Anantara</h3><p class="hp-project-location">Near Kalagarh Dam, Amangarh region</p><p class="hp-project-description">23.25 acres of plotted land, landscaped green spaces and internal roads, as illustrated in the project plan.</p><a class="hp-project-link" href="vacant-plots.html#project-anantara">Explore the project</a></div></article><article class="hp-project" data-categories="residential farmhouse" id="home-vantara-heritage"><a class="hp-project-image" href="vacant-plots.html#project-vantara-heritage"><img src="images/vantara-heritage-cover.webp" alt="Vantara Heritage" width="640" height="430" loading="lazy" decoding="async" /></a><div class="hp-project-body"><p class="hp-project-type">Residential</p><h3>Vantara Heritage</h3><p class="hp-project-location">Brij Ghat, Garhmukteshwar, Hapur, UP</p><p class="hp-project-description">A premium gated township offering farmhouse &amp; villa plots.</p><a class="hp-project-link" href="vacant-plots.html#project-vantara-heritage">Explore the project</a></div></article><article class="hp-project" data-categories="residential" id="home-aurya-city"><a class="hp-project-image" href="residential.html#project-aurya-city"><img src="images/aurya-city-updated-20.webp" alt="Aurya City" width="640" height="430" loading="lazy" decoding="async" /></a><div class="hp-project-body"><p class="hp-project-type">Plots</p><h3>Aurya City</h3><p class="hp-project-location">Gujarat (Dholera)</p><p class="hp-project-description">Premium Residential Plots near Dholera SIR</p><a class="hp-project-link" href="residential.html#project-aurya-city">Explore the project</a></div></article><article class="hp-project" data-categories="residential commercial hotel" id="home-bnx-group"><a class="hp-project-image" href="commercial.html#project-bnx-group"><img src="images/bnx-group-tower.webp" alt="BNX Group" width="640" height="430" loading="lazy" decoding="async" /></a><div class="hp-project-body"><p class="hp-project-type">5 Star Hotel</p><h3>BNX Group</h3><p class="hp-project-location">8/G/2, Delta 2, Greater Noida, Uttar Pradesh</p><p class="hp-project-description">An illustrated multi-level mixed-use destination, combining premium retail, hospitality, studios, banquet facilities and rooftop leisure.</p><a class="hp-project-link" href="commercial.html#project-bnx-group">Explore the project</a></div></article><article class="hp-project" data-categories="residential" id="home-godrej-tropical-isle"><div class="hp-project-body"><p class="hp-project-type">Resale</p><h3>Godrej Tropical Isle</h3><p class="hp-project-location">Sector 44, Noida</p><a class="hp-project-link" href="residential.html#project-godrej-tropical-isle">Explore the project</a></div></article><article class="hp-project" data-categories="commercial" id="home-eon-fairfox"><div class="hp-project-body"><p class="hp-project-type">Office Space</p><h3>EON Fairfox</h3><p class="hp-project-location">EON, Plot No-01A, Sector 140A, Noida, Uttar Pradesh 201304</p><a class="hp-project-link" href="commercial.html#project-eon-fairfox">Explore the project</a></div></article></div></section><section class="hp-category-band" id="categories"><div class="hp-section"><h2 class="hp-section-title">Featured Property Categories</h2><p class="hp-section-intro">Explore property options across categories designed for different requirements.</p><div class="hp-category-grid"><a href="commercial.html" class="hp-category"><img src="images/lifestyle-central-updated-cover.webp" alt="Commercial" width="500" height="360" loading="lazy" /><h3>Commercial</h3></a><a href="residential.html" class="hp-category"><img src="images/1.jpg" alt="Residential" width="500" height="360" loading="lazy" /><h3>Residential</h3></a><a href="farmhouses.html" class="hp-category"><img src="images/casa-corbett-updated-cover.webp" alt="Farmhouse" width="500" height="360" loading="lazy" /><h3>Farmhouse</h3></a><a href="commercial.html#project-bnx-group" class="hp-category"><img src="images/bnx-group-tower.webp" alt="Hotel" width="500" height="360" loading="lazy" /><h3>Hotel</h3></a></div></div></section><section class="hp-section hp-process"><h2 class="hp-section-title">How It Works: Find Your Property</h2><p class="hp-section-intro">A simple process to help you choose the right property.</p><div class="hp-step-grid"><div class="hp-step"><h3>Explore Projects</h3><p>Explore project options and layouts to find a suitable opportunity.</p></div><div class="hp-step"><h3>Review Details</h3><p>Review plot dimensions, pricing, and payment details before deciding.</p></div><div class="hp-step"><h3>Plan a Visit</h3><p>Speak with our team to arrange a site visit and discuss next steps.</p></div></div></section><section class="hp-contact-band" id="connect"><div class="hp-section hp-contact-layout"><div class="hp-contact-copy"><h2 class="hp-section-title">Contact Us</h2><p>Speak with our team to arrange a site visit and discuss next steps.</p><a class="hp-phone" href="tel:+919415378938">+91 9415378938</a><a class="hp-phone" href="tel:+919305486716">+91 9305486716</a><a class="hp-email" href="mailto:info@premiumpropertydepot.com">info@premiumpropertydepot.com</a><h3>Our Address</h3><p>1401D, EON Fairfax, Sector 140A, Noida, Uttar Pradesh</p></div><div class="hp-form-panel"><form class="hp-contact-form" id="contactForm">
+<input aria-label="User Name" autocomplete="name" id="name" placeholder="User Name" required="" type="text"/>
+<input aria-label="Phone" autocomplete="tel" id="mobile" inputmode="numeric" maxlength="10" pattern="[0-9]{10}" placeholder="Phone" required="" type="tel"/>
+<input aria-label="Email" autocomplete="email" id="email" placeholder="Email" required="" type="email"/>
+<select aria-label="Featured Properties" id="project" required=""><option disabled="" selected="" value="">Featured Properties</option><option value="Vrindaan">Vrindaan</option><option value="Lifestyle Central">Lifestyle Central</option><option value="Casa Corbett">Casa Corbett</option><option value="Anantara">Anantara</option><option value="Vantara Heritage">Vantara Heritage</option><option value="Aurya City">Aurya City</option><option value="BNX Group">BNX Group</option><option value="Godrej Tropical Isle">Godrej Tropical Isle</option><option value="EON Fairfox">EON Fairfox</option></select>
+<div class="mpa-consent"><label class="hp-consent-label"><input aria-label="Contact Us" class="mpa-consent-box" required="" type="checkbox"/><span>Contact Us</span></label><p>Speak with our team to arrange a site visit and discuss next steps.</p></div><button class="hp-button" type="submit">Enquire now</button>
+</form><p id="successMessage" class="hp-form-status" role="status" hidden></p></div></div></section></div></template></main>
+
+  <!-- QUICK ENQUIRY MODAL -->
+  <div id="enquiry-modal" class="modal-backdrop fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm" role="dialog" aria-modal="true" aria-labelledby="modal-property-title">
+    <div class="modal-content bg-white w-full max-w-lg rounded-2xl shadow-2xl overflow-hidden border border-gray-100 flex flex-col">
+      <div class="bg-blue-900 text-white p-5 flex items-center justify-between">
+        <div>
+          <span class="text-xs font-semibold text-yellow-400 uppercase tracking-wider block">Property Inquiry</span>
+          <h4 id="modal-property-title" class="text-lg font-bold mt-0.5 leading-snug">Property Inquiry</h4>
+        </div>
+        <button id="modal-close" class="text-white/80 hover:text-white p-1 rounded-full hover:bg-blue-800 transition-colors" aria-label="Close modal">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+
+      <div class="p-6">
+        <p class="text-sm text-gray-600 mb-4">
+          Connect directly with our authorized property consultants for site visits, verification documents, and verified plot details.
+        </p>
+
+        <div class="grid grid-cols-2 gap-3 mb-5">
+          <a href="tel:+919415378938" class="flex items-center justify-center gap-2 py-2.5 px-3 bg-blue-50 text-blue-900 rounded-xl font-semibold text-xs hover:bg-blue-100 transition-colors border border-blue-200">
+            <i class="fas fa-phone-alt text-yellow-600"></i> Call Expert
+          </a>
+
+        </div>
+
+        <form id="property-enquiry-form" class="space-y-3.5">
+          <input type="hidden" id="modal-property-input" name="property" value="" />
+          <div>
+            <label class="block text-xs font-semibold text-gray-700 mb-1">Your Full Name</label>
+            <input type="text" name="name" required aria-label="Dr. / Mr. / Ms." placeholder="Dr. / Mr. / Ms." class="w-full px-3.5 py-2.5 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-900 focus:border-transparent transition-all" />
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div>
+              <label class="block text-xs font-semibold text-gray-700 mb-1">Phone Number</label>
+              <input type="tel" name="phone" required aria-label="e.g. 9415378938" placeholder="e.g. 9415378938" class="w-full px-3.5 py-2.5 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-900 focus:border-transparent transition-all" />
+            </div>
+            <div>
+              <label class="block text-xs font-semibold text-gray-700 mb-1">Email Address</label>
+              <input type="email" name="email" required aria-label="yourname@gmail.com" placeholder="yourname@gmail.com" class="w-full px-3.5 py-2.5 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-900 focus:border-transparent transition-all" />
+            </div>
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-gray-700 mb-1">Message / Requirements</label>
+            <textarea name="message" rows="3" aria-label="I would like to know plot dimensions, approval status, and schedule a site visit." placeholder="I would like to know plot dimensions, approval status, and schedule a site visit." class="w-full px-3.5 py-2.5 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-900 focus:border-transparent transition-all"></textarea>
+          </div>
+          <button type="submit" class="w-full py-3 bg-blue-900 hover:bg-blue-800 text-yellow-400 font-bold text-sm rounded-xl shadow-md hover:shadow-lg transition-all">
+            Open Email Enquiry
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- TOAST NOTIFICATION -->
+  <div id="toast-notice" class="toast-notice fixed bottom-6 right-6 z-50 max-w-md bg-blue-900 text-white px-5 py-4 rounded-xl shadow-2xl border-l-4 border-yellow-400 flex items-start gap-3">
+    <i class="fas fa-check-circle text-yellow-400 text-xl mt-0.5"></i>
+    <div>
+      <h5 class="text-sm font-bold text-yellow-400">Request Sent Successfully</h5>
+      <p id="toast-message" class="text-xs text-blue-100 mt-1 leading-relaxed">Thank you! Our representative will get in touch shortly.</p>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="bg-blue-900 text-blue-50 pt-12 pb-6 border-t-4 border-yellow-400 mt-auto" role="contentinfo">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
+
+        <!-- Column 1: About -->
+        <div>
+          <h3 class="text-lg font-semibold text-yellow-400 mb-4 pb-2 border-b border-blue-800 inline-block">About Premium Properties</h3>
+          <p class="text-sm text-blue-100 leading-relaxed space-y-2">
+            <span class="block">We bring project information and property options together.</span>
+            <span class="block">Clear Project Details. Transparent Pricing. Dedicated Buyer Support.</span>
+            <span class="block">Explore residential and commercial property options by location.</span>
+          </p>
+        </div>
+
+        <!-- Column 2: Quick Links -->
+        <div>
+          <h3 class="text-lg font-semibold text-yellow-400 mb-4 pb-2 border-b border-blue-800 inline-block">Quick Links</h3>
+          <ul class="text-sm space-y-2">
+            <li><a href="index.html" class="text-yellow-400 hover:text-yellow-400 transition-colors flex items-center gap-2 active" aria-current="page"><i class="fas fa-chevron-right text-[10px] text-yellow-500"></i> Home</a></li>
+            <li><a href="about.html" class="text-blue-100 hover:text-yellow-400 transition-colors flex items-center gap-2"><i class="fas fa-chevron-right text-[10px] text-yellow-500"></i> About Us</a></li>
+            <li><a href="vacant-plots.html" class="text-blue-100 hover:text-yellow-400 font-medium transition-colors flex items-center gap-2"><i class="fas fa-chevron-right text-[10px] text-yellow-500"></i> Properties</a></li>
+            <li><a href="gallery.html" class="text-blue-100 hover:text-yellow-400 transition-colors flex items-center gap-2"><i class="fas fa-chevron-right text-[10px] text-yellow-500"></i> Gallery</a></li>
+            <li><a href="contact.html" class="text-blue-100 hover:text-yellow-400 transition-colors flex items-center gap-2"><i class="fas fa-chevron-right text-[10px] text-yellow-500"></i> Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Contact Us -->
+        <div>
+          <h3 class="text-lg font-semibold text-yellow-400 mb-4 pb-2 border-b border-blue-800 inline-block">Contact Us</h3>
+
+          <p class="text-sm font-medium text-white">info@premiumpropertydepot.com</p>
+
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=1401D%20EON%20Fairfax%20Sector%20140A%20Noida" target="_blank" rel="noopener noreferrer" class="group block mt-2" aria-label="Open location in Google Maps">
+            <p class="text-xs text-blue-200 leading-snug group-hover:text-yellow-400 transition-colors">
+              <i class="fas fa-map-marker-alt text-yellow-500 mr-1"></i>
+              1401D, EON Fairfax, Sector 140A, Noida, Uttar Pradesh
+            </p>
+          </a>
+
+          <!-- Compact Map -->
+          <div class="mt-3 bg-blue-950 p-1 rounded-lg shadow-inner">
+            <iframe
+              title="Premium Properties Office Location"
+              src="https://www.google.com/maps?q=1401D%20EON%20Fairfax%20Sector%20140A%20Noida&amp;output=embed"
+              class="w-full h-24 rounded border-0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+            <div class="text-right mt-1">
+              <a href="https://www.google.com/maps/search/?api=1&amp;query=1401D%20EON%20Fairfax%20Sector%20140A%20Noida" target="_blank" rel="noopener noreferrer" class="text-[10px] text-yellow-400 hover:text-yellow-300 font-medium tracking-wide">
+                VIEW ON GOOGLE MAPS &rarr;
+              </a>
+            </div>
+          </div>
+
+          <!-- Phone Numbers -->
+          <p class="text-sm text-blue-200 mt-4 flex items-center gap-2 flex-wrap">
+            <i class="fas fa-phone-alt text-yellow-500"></i>
+            <a href="tel:+919415378938" class="hover:text-yellow-400 transition-colors font-medium">9415378938</a>,
+            <a href="tel:+919305486716" class="hover:text-yellow-400 transition-colors font-medium">9305486716</a>,
+            <a href="mailto:info@premiumpropertydepot.com" class="hover:text-yellow-400 transition-colors font-medium">info@premiumpropertydepot.com</a>
+          </p>
+
+          <!-- Social Icons -->
+          <div class="flex gap-4 mt-5">
+
+
+
+
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom Section (Copyright) -->
+      <div class="border-t border-blue-800 mt-10 pt-6 flex flex-col md:flex-row items-center justify-between text-xs text-blue-300">
+        <p>&copy; 2026. All Rights Reserved</p>
+        <p class="mt-2 md:mt-0">
+          BUILDING TRUST.
+          <a href="index.html" target="_blank" rel="noopener noreferrer" class="text-yellow-400 hover:text-yellow-300 font-medium transition-colors">
+            DELIVERING VALUE.
+          </a>
+        </p>
+      </div>
+
+    </div>
+  </footer>
+
+  <script type="module" src="js/main.js"></script>
+  <script type="module" src="js/home.js"></script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+:root{--pp-ink:#292b29;--pp-gold:#916b20;--pp-gold-light:#d3ad58;--pp-paper:#f7f5ef;--pp-muted:#666a63;--pp-line:#deded5}
+body{background:var(--pp-paper)!important;color:var(--pp-ink)!important}
+html{scroll-padding-top:100px}
+body>header{background:#fffefb!important;color:var(--pp-ink)!important;border-bottom:1px solid var(--pp-line);box-shadow:0 4px 24px #292b2908!important}
+body>header>div{padding-top:14px!important;padding-bottom:14px!important}
+.site-header-brand{width:260px;height:56px}
+body>header .site-header-brand-image{object-position:left center}
+body>header #nav-menu>.nav-link,body>header #nav-menu>.group>button{color:var(--pp-ink)!important;font-size:13px;font-weight:500}
+body>header #nav-menu .nav-link.active{color:var(--pp-gold)!important}
+body>header #nav-menu .group>.absolute>div{background:#fffefb!important;border:1px solid var(--pp-line)!important;border-radius:12px!important;box-shadow:0 18px 50px #292b2920!important;padding:8px!important}
+body>header #nav-menu .group a{color:var(--pp-ink)!important;border-radius:7px!important}
+body>header #nav-menu .group a:hover,body>header #nav-menu .group a.active{background:#eee8d9!important;color:#775614!important}
+.nav-link::after{background:var(--pp-gold)!important;height:2px!important}
+.btn-yellow{background:var(--pp-gold)!important;color:#fff!important;border-radius:7px!important;box-shadow:none!important;font-weight:500!important}
+.btn-yellow:hover{background:#886117!important;box-shadow:none!important;transform:translateY(-1px)}
+#menu-toggle{color:var(--pp-ink)!important}#menu-toggle:hover{background:#eee8d9!important}
+#mobile-menu{background:var(--pp-ink)!important}#mobile-menu .border-blue-800{border-color:#ffffff20!important}#mobile-menu .text-yellow-400,#mobile-menu .active{color:var(--pp-gold-light)!important}#mobile-menu a:hover,#mobile-menu .mobile-submenu-toggle:hover{background:#ffffff0d!important}#mobile-menu a.active{background:#ffffff0d!important}
+body>footer{background:#fffefb!important;border-top:3px solid var(--pp-gold)!important;color:var(--pp-ink)!important;padding-top:48px!important}
+body>footer h3{color:var(--pp-gold)!important;border-color:#ded8ca!important;font-size:16px;font-weight:500;letter-spacing:.03em}
+body>footer .text-blue-100,body>footer .text-blue-200,body>footer .text-blue-300{color:#575d53!important}body>footer .text-white{color:var(--pp-ink)!important}body>footer .text-yellow-400,body>footer .text-yellow-500{color:var(--pp-gold)!important}body>footer .border-blue-800{border-color:#ded8ca!important}body>footer .bg-blue-800,body>footer .bg-blue-950{background:#eee9dd!important}body>footer a:hover{color:#76551a!important}
+main:not(#homepage-content){color:var(--pp-ink)}main:not(#homepage-content) .text-blue-900{color:var(--pp-ink)!important}main:not(#homepage-content) .text-yellow-500,main:not(#homepage-content) .text-yellow-600{color:var(--pp-gold)!important}main:not(#homepage-content) .border-blue-900{border-color:var(--pp-gold)!important}main:not(#homepage-content) .bg-blue-900{background:var(--pp-ink)!important}main:not(#homepage-content) .bg-blue-50\/60{background:#eee8d9!important}main:not(#homepage-content) .border-blue-100{border-color:var(--pp-line)!important}
+main:not(#homepage-content) h1{font-family:Georgia,'Times New Roman',serif!important;font-weight:400!important;letter-spacing:-.035em!important;color:var(--pp-ink)!important}
+body>main:not(#homepage-content):not(.property-listings-page){padding-top:56px!important;padding-bottom:56px!important}
+body>main:not(#homepage-content) .shadow-lg,body>main:not(#homepage-content) .shadow-xl{box-shadow:0 8px 35px #292b2908!important;border-radius:14px!important;border:1px solid var(--pp-line)!important}
+main input:focus,main textarea:focus{outline-color:var(--pp-gold)!important;--tw-ring-color:var(--pp-gold)!important}main input,main textarea{border-color:var(--pp-line)!important}
+.property-listings-page .property-listings-container{max-width:1240px;padding:64px 32px}
+.property-listings-page h1{text-align:left;font-size:48px;line-height:1.12}
+.property-listings-page .property-listings-intro{text-align:left;max-width:720px;color:var(--pp-muted);line-height:1.8;margin-top:16px}
+.property-listings-page .property-listing-categories{gap:10px;margin-top:26px}
+.property-listings-page .property-listing-categories>div,.property-listings-page .property-listing-categories>div:last-child:nth-child(odd){flex:0 1 auto;padding:8px 16px;border:1px solid #d9cfb8;border-radius:30px;box-shadow:none;background:transparent;color:#715725;font-size:13px}
+.property-listings-page .property-listing-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px;margin-top:36px;align-items:start}
+.property-listings-page .property-listing-card{max-width:none;width:100%;border:0;border-radius:12px;box-shadow:0 5px 20px #292b2909;overflow:hidden;background:#fffefb;transition:transform .2s,box-shadow .2s}
+.property-listings-page .property-listing-card:hover{transform:translateY(-3px);box-shadow:0 14px 36px #292b2914}
+.property-listings-page .property-listing-image{height:238px}
+.property-listings-page .property-title{padding:22px 24px 12px;text-align:left;font:400 26px/1.15 Georgia,serif;color:var(--pp-ink)!important}
+.property-listings-page .property-listing-copy{padding:0 24px 24px;font-size:13px;line-height:1.8;color:var(--pp-muted)}
+.property-listings-page .property-listing-location{color:#5c6057!important}.property-listings-page .property-listing-copy strong{font-weight:500;color:var(--pp-ink)}
+.property-listings-page .property-listing-details{border-top:1px solid #eae6db;padding-top:12px;margin-top:16px}.property-listings-page .property-listing-details summary{color:#806019;font-weight:500}
+.property-listings-page .property-listing-enquiry a{display:inline-block;color:var(--pp-ink);font-size:13px;text-decoration:none;border-bottom:1px solid var(--pp-gold);padding-bottom:3px}
+.property-listings-page .property-listing-contacts{text-align:left;padding-top:24px;border-top:1px solid var(--pp-line);margin-top:40px;color:var(--pp-muted)}.property-listings-page .property-listing-contacts a{color:var(--pp-ink);text-decoration:none}
+.property-card:not(.property-listing-card){border-color:var(--pp-line)!important;border-radius:12px!important;box-shadow:0 5px 22px #292b2909!important}.property-card:not(.property-listing-card) .property-title{color:var(--pp-ink)!important}
+.modal-content{border-radius:14px!important}.modal-content>.bg-blue-900{background:var(--pp-ink)!important}.modal-content .text-yellow-400{color:var(--pp-gold-light)!important}.modal-content .bg-yellow-400{background:var(--pp-gold)!important;color:#fff!important}
+@media(max-width:1023px){.property-listings-page .property-listing-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.property-listings-page h1{font-size:40px}}
+@media(max-width:639px){.site-header-brand{width:195px;height:48px}body>header>div{padding-top:10px!important;padding-bottom:10px!important}.property-listings-page .property-listings-container{padding:40px 20px}.property-listings-page h1{font-size:35px}.property-listings-page .property-listing-grid{grid-template-columns:1fr;gap:24px}.property-listings-page .property-listing-image{height:240px}.property-listings-page .property-listing-categories>div{font-size:12px;padding:7px 12px}.property-listings-page .property-listing-contacts{font-size:12px}body>footer{padding-top:36px!important}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
+/* Shared contact surfaces follow the same logo-derived palette. */
+main:not(#homepage-content) .text-yellow-400{color:var(--pp-gold-light)!important}
+main:not(#homepage-content) .text-red-500{color:var(--pp-gold)!important}
+#mobile-menu .text-blue-100,#mobile-menu .text-blue-200{color:#deded5!important}
+.modal-content .bg-blue-50,.modal-content .bg-emerald-50{background:#eee8d9!important}
+.modal-content .text-blue-900,.modal-content .text-emerald-800,.modal-content .text-emerald-600,.modal-content .text-yellow-600{color:#806019!important}
+.modal-content .border-blue-200,.modal-content .border-emerald-200{border-color:#deded5!important}
+body{overflow-x:clip}

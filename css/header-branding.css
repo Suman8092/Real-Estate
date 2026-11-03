@@ -1,0 +1,24 @@
+/* Confined to the logo slot: preserve the previous branding footprint. */
+.site-header-brand {
+  width: 203.375px;
+  height: 37.25px;
+  flex: 0 0 auto;
+}
+.site-header-brand-link {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.site-header-brand-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: left center;
+}
+@media (min-width: 640px) {
+  .site-header-brand {
+    width: 270.515625px;
+    height: 46px;
+  }
+}

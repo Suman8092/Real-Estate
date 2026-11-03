@@ -1,0 +1,135 @@
+/* mpa-a11y-fix v1 : contrast + footer link colour repair. Loads last. */
+
+/* 1. Footer links: restore footer palette (generic link rule was overriding to dark navy) */
+.f-group a,.f-group a:link,.f-group a:visited{color:#b8c6c1;text-decoration:none;font-weight:500}
+.f-group a:hover,.f-group a:focus{color:#D4AF37;text-decoration:none}
+.f-bottom-bar,.f-bottom-bar a,.f-bottom-bar a:link,.f-bottom-bar a:visited{color:#a3b0ac;text-decoration:none}
+.f-bottom-bar a:hover,.f-bottom-bar a:focus{color:#D4AF37}
+.gw-premium-footer a:not([class]),.lp-slim-footer a:not([class]),
+.site-footer a:not([class]),footer a:not([class]){text-decoration:none;font-weight:inherit}
+
+/* 2. Header / nav links never inherit the body-link treatment */
+header a:not([class]),nav a:not([class]),.main-navigation a:not([class]),
+.ast-mobile-popup-drawer a:not([class]){text-decoration:none;font-weight:inherit}
+
+/* 3. Astra default text grey #808285 = 3.85:1 on white (below WCAG AA 4.5). Darken. */
+body{color:#3f4145}
+.entry-content :where(h1),.entry-content :where(h2),.entry-content :where(h3),
+.entry-content :where(h4),.entry-content :where(h5),.entry-content :where(h6){color:#2b2d31}
+button,input,select,textarea{color:#3f4145}
+
+/* 4. Focus visible for keyboard users (was none anywhere) */
+a:focus-visible,button:focus-visible,input:focus-visible,
+select:focus-visible,textarea:focus-visible,[tabindex]:focus-visible
+{outline:2px solid #C5A059;outline-offset:2px;border-radius:2px}
+
+/* 5. Respect reduced-motion */
+@media (prefers-reduced-motion:reduce){
+ *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;
+ transition-duration:.001ms!important;scroll-behavior:auto!important}
+}
+
+/* 6. Premium footer: ALL links use footer palette, never the body-link colour */
+.gw-premium-footer a,.f-shell a,.f-top a,.f-brand a,.f-contact-card a,
+.f-contact-info a,.f-map-head a,.f-sitemap a,.f-social-links a,.lp-slim-footer a
+{text-decoration:none;font-weight:inherit}
+.f-contact-info a,.f-contact-info a:link,.f-contact-info a:visited{color:#D4AF37}
+.f-contact-info a:hover{color:#ffffff}
+.f-map-head a,.f-map-head a:link,.f-map-head a:visited{color:#D4AF37}
+.f-brand a:not([class]),.f-top p a:not([class]){color:#D4AF37}
+.f-social-links a{color:#D4AF37}
+
+/* 7. DARK boxes: text and links must never use the light-background palette.
+      (ye sab 1.0-1.4 contrast pe invisible the) */
+.mpa-meth,.mpa-src,.mpa-meth li,.mpa-src li,.mpa-meth p,.mpa-src p{color:#d9e2de}
+.mpa-meth a,.mpa-src a,.mpa-meth a:link,.mpa-src a:link,
+.mpa-meth a:visited,.mpa-src a:visited{color:#D4AF37;text-decoration:underline;
+ text-underline-offset:2px;font-weight:600}
+.mpa-meth a:hover,.mpa-src a:hover{color:#ffffff}
+
+.mpa-wrap div>p,.mpa-wrap p{color:inherit}
+[style*="1e3a8a"] p,[style*="#1E3A8A"] p{color:#e6edea}
+
+.fg-grid .fc,.fg-grid .fc li,.fg-grid .fc p,.fb-bot,.fb-bot p,.fb-bot a{color:#cdd6d2}
+.fb-bot a:hover{color:#D4AF37}
+
+.f-contact-info,.f-contact-info p,.f-contact-info b{color:#d7e0dc}
+
+
+.app-footer-concierge,.app-footer-concierge p{color:#dfe7e3}
+.app-footer-concierge a,.app-footer-concierge a:link,.app-footer-concierge a:visited{color:#D4AF37}
+
+/* 8. Gold used as TEXT on light backgrounds: 2.46:1 -> 4.3:1 (brand gold stays on dark bg) */
+.property-card h2,.property-card h2 a,
+.stat-item h4,.app-header p,.app-price-item .label,.m-info .type,
+td.price,.ll .dist,.ov-grid .stag,.ext-link,
+.rent-box span,.pricing-box span{color:#96752F}
+.property-card h2 a:hover,.ext-link:hover{color:#7E6020}
+
+/* 9. WhatsApp bar: white on #25D366 = 1.98:1. Darker green, same family. */
+.mpa-callbar .mpa-wa,a.mpa-wa{background:#128C45}
+.mpa-callbar .mpa-wa:hover,a.mpa-wa:hover{background:#0E7A3C}
+
+/* 10. .mpa-consent appears on BOTH light and dark forms - scope by its container */
+.contact-form .mpa-consent,.contact-form .mpa-consent-note,
+.contact-form .mpa-consent-row,.contact-form .mpa-consent-row span{color:#4a5a52}
+.contact-form .mpa-consent-links a,.contact-form .mpa-consent-links a:link,
+.contact-form .mpa-consent-links a:visited{color:#7E6020;text-decoration:underline}
+.form-box .mpa-consent,.form-box .mpa-consent-note,
+.form-box .mpa-consent-row,.form-box .mpa-consent-row span{color:#c3ccc8}
+.form-box .mpa-consent-links a,.form-box .mpa-consent-links a:link,
+.form-box .mpa-consent-links a:visited{color:#D4AF37;text-decoration:underline}
+
+/* 11. remaining gold-on-light text */
+.asset-desc h3,.seo-rich-text h3,.seo-box h3,.conn-time,
+.app-price-item .label,.app-price-item span.label{color:#96752F}
+
+/* 12. third consent variant: .mpa-form sits on a light card */
+.mpa-form .mpa-consent,.mpa-form .mpa-consent-note,
+.mpa-form .mpa-consent-row,.mpa-form .mpa-consent-row span{color:#4a5a52}
+.mpa-form .mpa-consent-links a,.mpa-form .mpa-consent-links a:link,
+.mpa-form .mpa-consent-links a:visited{color:#7E6020;text-decoration:underline}
+
+/* 13. gold text on light surfaces - force past Elementor/page specificity */
+.app-price-item .label,.app-price-item span.label,.asset-desc h3,
+.seo-rich-text h3,.seo-box h3,.conn-time,.property-card h2,.property-card h2 a,
+.stat-item h4,.m-info .type,td.price,.ll .dist,.ov-grid .stag,.ext-link,
+.rent-box span,.pricing-box span{color:#96752F!important}
+.elite-content h2,.elite-content h2 a,.elite-content h3,.elite-content h3 a{color:#fff!important}
+
+/* 14. consent pill: give it its own light surface so it is correct on ANY parent */
+.mpa-consent{background:rgba(255,255,255,.94);border-radius:8px;padding:10px 12px;color:#44524c}
+.mpa-consent .mpa-consent-note,.mpa-consent .mpa-consent-row,
+.mpa-consent .mpa-consent-row span,.mpa-consent p{color:#44524c}
+.mpa-consent .mpa-consent-links a,.mpa-consent .mpa-consent-links a:link,
+.mpa-consent .mpa-consent-links a:visited{color:#7E6020;text-decoration:underline}
+.mpa-consent .mpa-consent-links a:hover{color:#0A192F}
+
+/* 15. last gold-on-light micro-labels (10px) */
+.badge,.ft,.stag,span.badge,div.ft,span.stag{color:#96752F!important}
+.hero .badge,.hero .stag,[class*="dark"] .badge,[class*="dark"] .stag{color:#D4AF37!important}
+
+/* 16. final residuals */
+.advisor-box,.advisor-box p{color:#dfe7e3}
+.advisor-box a,.advisor-box a:link,.advisor-box a:visited{color:#D4AF37;text-decoration:underline}
+.stat-label,.unit-size,.price-row span,.price-row.featured span{color:#96752F!important}
+
+/* 17. app-style portal footers (dark green) + remaining gold paragraphs on white */
+.app-footer-portal,.app-footer-portal p{color:#dfe7e3}
+.app-footer-portal a,.app-footer-portal a:link,.app-footer-portal a:visited{color:#D4AF37}
+.container>.header>p{color:#96752F}
+
+/* 18. last 7 invisible elements */
+.brand-banner h2,.brand-banner h2 a,.brand-banner a{color:#D4AF37}
+.m-footer,.m-footer p{color:#dfe7e3}
+.m-footer a,.m-footer a:link,.m-footer a:visited{color:#D4AF37}
+.app-footer-concierge h3{color:#ffffff}
+.info-callout,.info-callout h3,.info-callout p{color:#e6edea}
+.cta-section,.cta-section p{color:#dfe7e3}
+.advisor-box .gold-btn,a.gold-btn{color:#0A1F17;background:#D4AF37;font-weight:700}
+.advisor-box .gold-btn:hover,a.gold-btn:hover{background:#E6C14C;color:#0A1F17}
+.invest-section .section-title,section.invest-section h2{color:#0A192F}
+
+/* 19. */
+.info-callout a,.info-callout a:link,.info-callout a:visited{color:#D4AF37;text-decoration:underline}
+.advisor-box a.gold-btn,.sale-body a.gold-btn{color:#0A1F17!important;background:#D4AF37!important}
