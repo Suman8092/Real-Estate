@@ -15,6 +15,15 @@ body>header #nav-menu .group a:hover,body>header #nav-menu .group a.active{backg
 .btn-yellow:hover{background:#886117!important;box-shadow:none!important;transform:translateY(-1px)}
 #menu-toggle{color:var(--pp-ink)!important}#menu-toggle:hover{background:#eee8d9!important}
 #mobile-menu{background:var(--pp-ink)!important}#mobile-menu .border-blue-800{border-color:#ffffff20!important}#mobile-menu .text-yellow-400,#mobile-menu .active{color:var(--pp-gold-light)!important}#mobile-menu a:hover,#mobile-menu .mobile-submenu-toggle:hover{background:#ffffff0d!important}#mobile-menu a.active{background:#ffffff0d!important}
+/* Keep every drawer state legible against its charcoal background. */
+#mobile-menu{color:#eeede8!important;height:100dvh;max-height:100dvh;border-color:#ffffff26!important}
+#mobile-menu a:not(.active):not(.btn-yellow),#mobile-menu .mobile-submenu-toggle{color:#eeede8!important}
+#mobile-menu>div:first-child span{color:var(--pp-gold-light)!important}
+#mobile-menu>div:first-child img{background:#fffefb;outline:3px solid #fffefb;border-radius:2px}
+#mobile-menu .border-gray-100{border-color:#ffffff26!important}
+#mobile-menu #menu-close{background:#fffefb;color:var(--pp-ink)!important}
+#mobile-menu a.btn-yellow,#mobile-menu a.btn-yellow.active{color:#fff!important;background:var(--pp-gold)!important}
+#mobile-menu .overflow-y-auto{min-height:0}
 body>footer{background:#fffefb!important;border-top:3px solid var(--pp-gold)!important;color:var(--pp-ink)!important;padding-top:48px!important}
 body>footer h3{color:var(--pp-gold)!important;border-color:#ded8ca!important;font-size:16px;font-weight:500;letter-spacing:.03em}
 body>footer .text-blue-100,body>footer .text-blue-200,body>footer .text-blue-300{color:#575d53!important}body>footer .text-white{color:var(--pp-ink)!important}body>footer .text-yellow-400,body>footer .text-yellow-500{color:var(--pp-gold)!important}body>footer .border-blue-800{border-color:#ded8ca!important}body>footer .bg-blue-800,body>footer .bg-blue-950{background:#eee9dd!important}body>footer a:hover{color:#76551a!important}
