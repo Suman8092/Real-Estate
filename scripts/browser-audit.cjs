@@ -35,6 +35,13 @@ const path = require('node:path');
         assert(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1), `${width}/${file}: overflow`);
         const header = await page.locator('body > header').evaluate(element => ({ height: element.clientHeight, bg: getComputedStyle(element).backgroundColor }));
         assert.equal(header.height, width < 640 ? 68 : 84, `${width}/${file}: header geometry`);
+        assert.equal(header.bg, 'rgb(255, 255, 255)', `${file}: pure white header`);
+        assert.equal(await page.locator('body > footer').evaluate(element => getComputedStyle(element).backgroundColor), 'rgb(255, 255, 255)', `${file}: pure white footer`);
+        if (file !== 'index.html') {
+          const sections = await page.locator('main .brand-section').evaluateAll(elements => elements.map(element => getComputedStyle(element).backgroundColor));
+          assert.equal(sections.length, 2, `${file}: two existing content groups`);
+          sections.forEach((color, index) => assert.equal(color, index % 2 ? 'rgb(0, 0, 0)' : 'rgb(255, 255, 255)', `${file}: alternating body sections`));
+        }
         assert.equal(await page.locator('#nav-menu a[aria-current="page"]').count(), 1, `${file}: desktop active link count`);
         if (categories.includes(file)) {
           assert.equal(await page.locator(`#nav-menu .group a[aria-current="page"]`).getAttribute('href'), file);
@@ -70,7 +77,7 @@ const path = require('node:path');
       await page.goto(base, { waitUntil: 'networkidle' });
       result.sections = await page.locator('.hp-home > section').evaluateAll(sections => sections.map(element => ({ background: getComputedStyle(element).backgroundColor, title: element.querySelector('h1,h2')?.textContent })));
       assert.equal(result.sections.length, 8);
-      result.sections.forEach((section, index) => assert.equal(section.background, index % 2 ? 'rgb(41, 43, 41)' : 'rgb(247, 245, 239)'));
+      result.sections.forEach((section, index) => assert.equal(section.background, index % 2 ? 'rgb(0, 0, 0)' : 'rgb(255, 255, 255)'));
       await page.locator('.hp-hero .hp-button').click();
       assert(await page.locator('#projects').evaluate(element => Math.abs(element.getBoundingClientRect().top) < 150));
       for (const [filter, count] of Object.entries({ all: 9, residential: 5, commercial: 3, farmhouse: 3, hotel: 2 })) {

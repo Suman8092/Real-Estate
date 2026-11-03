@@ -1,6 +1,6 @@
 # Premium Properties
 
-Multipage real estate website with verified Sarira Demo2 content and imagery. The homepage has eight alternating ivory/charcoal sections; the shared footer uses ivory, dark text and gold accents. Existing page names and property categories are retained.
+Multipage real estate website with verified Sarira Demo2 content and imagery. The homepage has eight alternating pure-white/pure-black sections; other pages have a white introduction and black content area. The shared footer is pure white. An image-led split hero, an open featured-project row and an asymmetric gallery give the site its own composition. Existing page names and property categories are retained.
 
 ## Local development
 
@@ -26,6 +26,7 @@ In another terminal:
 
 ```powershell
 npm run test:browser
+npm run test:brand-browser
 ```
 
 Browser QA uses installed Edge on Windows. Elsewhere install Playwright Chromium with `npx playwright install chromium`. A custom executable can be supplied as `BROWSER_EXECUTABLE`. Set `AUDIT_URL` to the actual preview URL if using another port. Reports and screenshots go to ignored `artifacts/`.
@@ -67,5 +68,7 @@ No hosting provider, domain, DNS, certificate, deployment credential or producti
 3. Configure HTTPS and server headers using the host's supported configuration. Cache fingerprinted assets for one year with immutable; revalidate HTML, robots.txt and sitemap.xml. Cache the non-fingerprinted social logo conservatively. Enable Brotli/gzip where supported.
 4. Configure X-Content-Type-Options: nosniff, a suitable Referrer-Policy and a tested Content Security Policy permitting required fonts/styles/maps. Enable HSTS only after HTTPS is verified. These settings cannot be configured or certified without a host.
 5. Test every HTML URL, the legacy alias if required, actual map/font services, canonical/social URLs, robots.txt, sitemap, category/project links, mobile navigation and email/phone actions on the live domain.
+
+See BRAND-COLORS.md for the exact sampled logo colors, extraction evidence and contrast pairings. Run `npm run brand:extract` after an intentional logo update; production builds run this automatically. The logo image and property images are not recolored.
 
 See PRODUCTION-AUDIT.md for current results and deployment-dependent checks.

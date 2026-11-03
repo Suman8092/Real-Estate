@@ -1,0 +1,35 @@
+{
+  "source": "images/premium-property-depot-logo.png",
+  "sha256": "b9e98f2d94918d1427b553f60a80d5e4452e838de2d98ee9810532a95f56858e",
+  "width": 971,
+  "height": 257,
+  "method": "Count exact full-resolution RGB values of fully opaque pixels; no resizing, clustering, quantization or color adjustment. Gold candidates satisfy R > G > B and R - B > 50.",
+  "charcoal": {
+    "hex": "#4C4B47",
+    "pixels": 12379,
+    "sample": {
+      "x": 582,
+      "y": 22
+    }
+  },
+  "gold": {
+    "hex": "#9A6C14",
+    "pixels": 162,
+    "sample": {
+      "x": 160,
+      "y": 33
+    }
+  },
+  "highlight": {
+    "hex": "#BE851A",
+    "pixels": 129,
+    "sample": {
+      "x": 221,
+      "y": 37
+    }
+  },
+  "neutrals": [
+    "#000000",
+    "#FFFFFF"
+  ]
+}

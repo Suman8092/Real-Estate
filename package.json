@@ -9,10 +9,12 @@
     "preview": "vite preview",
     "build:css": "tailwindcss -c tailwind.config.cjs -i css/utilities.input.css -o css/utilities.css --minify",
     "predev": "npm run build:css",
-    "prebuild": "npm run build:css && node scripts/seo.mjs",
+    "prebuild": "npm run brand:extract && npm run build:css && node scripts/seo.mjs",
     "optimize:images": "node scripts/optimize-images.mjs",
-    "test": "node scripts/audit.mjs",
-    "test:browser": "node scripts/browser-audit.cjs"
+    "test": "node scripts/audit.mjs && node scripts/verify-brand.mjs",
+    "test:browser": "node scripts/browser-audit.cjs",
+    "brand:extract": "node scripts/extract-brand.mjs",
+    "test:brand-browser": "node scripts/brand-browser-audit.cjs"
   },
   "keywords": [
     "real-estate",
