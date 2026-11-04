@@ -110,5 +110,10 @@
 .hp-feature-caption,.hp-project-body{display:flex;flex-direction:column;flex:1}
 .hp-feature-caption>p{margin-top:auto}
 .hp-project-body>.hp-project-link{margin-top:auto;align-self:flex-start}
+
+/* Compact name-and-address presentation for homepage project cards. */
+.hp-project-body,.hp-project:has(.hp-project-image) .hp-project-body{padding:14px 0 16px}
+.hp-project h3{min-height:0;line-height:1.2;margin-bottom:8px}
+.hp-project-location{min-height:0;margin-bottom:0;line-height:1.6}
 .hp-category>h3{margin-top:auto}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
