@@ -1,0 +1,55 @@
+/* About content only. The global header, footer and other pages use their existing styles. */
+body>main#company-about.about-page{padding:56px 24px 72px!important}
+#company-about{--ap-ink:var(--pp-ink);--ap-gold:var(--pp-gold);--ap-paper:var(--pp-paper);color:var(--ap-ink)}
+#company-about .ap-container{max-width:1160px;margin:0 auto}
+#company-about .ap-section{margin-top:64px}
+#company-about .ap-hero{background:#fffefb;border:1px solid var(--pp-line);border-top:4px solid var(--ap-gold);border-radius:16px;padding:48px 64px;text-align:center}
+#company-about .ap-hero h1{font:400 48px/1.14 Georgia,serif;letter-spacing:-.03em;margin:0 0 20px}
+#company-about .ap-hero p{font-size:15px;line-height:1.9;max-width:800px;margin:0 auto;color:var(--pp-muted)}
+#company-about .ap-eyebrow{font-size:10px;line-height:1.8;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--ap-gold);margin:0 0 16px}
+#company-about .ap-heading{font:400 34px/1.22 Georgia,serif;letter-spacing:-.02em;margin:0 0 20px;color:var(--ap-ink)}
+#company-about .ap-copy{font-size:14px;line-height:1.95;color:var(--pp-muted);margin:0 0 20px}
+#company-about .ap-services-title{font:400 24px/1.3 Georgia,serif;color:var(--ap-ink);margin:26px 0 14px}
+#company-about .ap-overview{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+#company-about .ap-commercial-image{margin:0;background:#fffefb;border:1px solid var(--pp-line);border-radius:14px;overflow:hidden}
+#company-about .ap-commercial-image img{display:block;width:100%;height:auto;aspect-ratio:1;object-fit:cover}
+#company-about .ap-commercial-image figcaption{padding:20px 24px;font:400 22px/1.35 Georgia,serif;border-top:1px solid var(--pp-line)}
+#company-about .ap-property-types{list-style:none;padding:0;margin:24px 0 28px;display:grid;grid-template-columns:1fr 1fr;gap:12px 24px}
+#company-about .ap-property-types a{display:block;padding:11px 0;border-bottom:1px solid var(--pp-line);font-size:14px;text-decoration:none;color:var(--ap-ink)}
+#company-about .ap-property-types a::before{content:'\2713';color:var(--ap-gold);margin-right:12px}
+#company-about .ap-link{display:inline-block;font-size:13px;color:var(--ap-ink);text-decoration:none;border-bottom:1px solid var(--ap-gold);padding-bottom:5px}
+#company-about a:hover{color:var(--ap-gold)}
+#company-about a:focus-visible,#company-about summary:focus-visible{outline:2px solid var(--ap-gold);outline-offset:5px}
+#company-about .ap-section-header{text-align:center;max-width:800px;margin:0 auto 30px}
+#company-about .ap-section-header .ap-copy{margin-bottom:0}
+#company-about .ap-benefit-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+#company-about .ap-benefit{padding:26px;background:#fffefb;border:1px solid var(--pp-line);border-radius:12px}
+#company-about .ap-benefit i{display:block;color:var(--ap-gold);font-size:23px;margin-bottom:20px}
+#company-about .ap-benefit h3{font:400 23px/1.25 Georgia,serif;margin:0 0 14px;color:var(--ap-ink)}
+#company-about .ap-benefit p{font-size:13px;line-height:1.9;color:var(--pp-muted);margin:0}
+#company-about .ap-values{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+#company-about .ap-value{padding:34px;background:#fffefb;border:1px solid var(--pp-line);border-left:4px solid var(--ap-gold);border-radius:12px}
+#company-about .ap-value h3{font:400 28px/1.2 Georgia,serif;margin:0 0 20px;color:var(--ap-ink)}
+#company-about .ap-value .ap-copy{margin:0}
+#company-about .ap-project-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px;align-items:stretch}
+#company-about .ap-project{display:flex;flex-direction:column;min-width:0;background:#fffefb;border:1px solid var(--pp-line);border-radius:12px;overflow:hidden}
+#company-about .ap-project img{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover}
+#company-about .ap-project-content{padding:22px;display:flex;flex-direction:column;flex:1}
+#company-about .ap-project h3{font:400 23px/1.2 Georgia,serif;margin:0 0 12px;color:var(--ap-ink)}
+#company-about .ap-project p{font-size:12px;line-height:1.8;color:var(--pp-muted);margin:0 0 22px}
+#company-about .ap-project .ap-link{margin-top:auto;align-self:flex-start;font-size:12px}
+#company-about .ap-process{background:#fffefb;border:1px solid var(--pp-line);border-radius:14px;padding:36px}
+#company-about .ap-process .ap-heading{margin-bottom:26px}
+#company-about .ap-process details{border-top:1px solid var(--pp-line)}
+#company-about .ap-process summary{cursor:pointer;font-size:15px;font-weight:500;padding:20px 0;color:var(--ap-ink)}
+#company-about .ap-process summary::marker{color:var(--ap-gold)}
+#company-about .ap-process details p{font-size:14px;line-height:1.9;color:var(--pp-muted);margin:0;padding:0 0 24px 20px}
+#company-about .ap-contact{display:grid;grid-template-columns:1fr 1fr;gap:40px;padding:34px 36px;border:1px solid var(--pp-line);border-radius:12px;background:#fffefb;align-items:start}
+#company-about .ap-contact .ap-heading{font-size:30px;margin-bottom:16px}
+#company-about .ap-contact .ap-copy{margin-bottom:20px}
+#company-about .ap-contact-links{display:flex;flex-direction:column;align-items:flex-start;gap:12px;overflow-wrap:anywhere}
+#company-about .ap-contact-links a{color:var(--ap-ink);font-size:14px;text-decoration:none}
+#company-about .ap-contact-links a:hover{color:var(--ap-gold)}
+#company-about .ap-address{font-size:13px;line-height:1.9;color:var(--pp-muted);margin:10px 0 0}
+@media(max-width:1023px){#company-about .ap-overview{gap:32px}#company-about .ap-benefit-grid{grid-template-columns:repeat(2,minmax(0,1fr))}#company-about .ap-project-grid{grid-template-columns:repeat(2,minmax(0,1fr))}#company-about .ap-hero{padding:38px 36px}#company-about .ap-value{padding:28px}}
+@media(max-width:639px){body>main#company-about.about-page{padding:32px 20px 44px!important}#company-about .ap-section{margin-top:40px}#company-about .ap-hero{padding:30px 22px}#company-about .ap-hero h1{font-size:38px}#company-about .ap-hero p{font-size:14px}#company-about .ap-heading{font-size:30px}#company-about .ap-overview,#company-about .ap-benefit-grid,#company-about .ap-values,#company-about .ap-project-grid,#company-about .ap-contact{grid-template-columns:1fr}#company-about .ap-commercial-image img{aspect-ratio:4/3;object-position:center 60%}#company-about .ap-property-types{gap:8px 18px}#company-about .ap-benefit,#company-about .ap-value{padding:24px}#company-about .ap-process{padding:26px 22px}#company-about .ap-contact{padding:26px;gap:26px}#company-about .ap-project img{aspect-ratio:16/10}#company-about .ap-contact-links a{font-size:13px}}
