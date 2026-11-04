@@ -64,3 +64,20 @@ body{overflow-x:clip}
 /* Retain the separately requested footer logo. */
 body>footer .footer-brand{display:block;width:240px;max-width:100%;margin-bottom:24px}
 body>footer .footer-brand img{display:block;width:100%;height:auto;object-fit:contain}
+/* Align existing cards within each responsive row without clipping their content. */
+.property-listings-page .property-listing-grid{align-items:stretch}
+.property-listings-page .property-listing-card{display:flex;flex-direction:column;min-width:0}
+.property-listings-page .property-listing-image{display:block;flex-shrink:0}
+.property-listings-page .property-listing-copy{display:flex;flex-direction:column;flex:1}
+.property-listings-page .property-listing-copy .property-listing-enquiry{margin-top:auto!important;margin-bottom:0;padding-top:12px}
+.property-listings-page .property-listing-copy .property-listing-details{margin-top:auto}
+.property-listings-page .property-listing-copy:has(.property-listing-details) .property-listing-enquiry{margin-top:0!important}
+.gallery-grid{display:grid!important;grid-template-columns:repeat(3,minmax(0,300px));justify-content:center;align-items:stretch}
+.gallery-grid>.property-card{display:flex;flex-direction:column;min-width:0}
+.gallery-grid>.property-card>img{flex-shrink:0}
+.gallery-grid>.property-card>.property-title{flex:1;display:flex;align-items:center;justify-content:center;margin:0}
+.about-project-grid>div,.contact-info-grid>div{display:flex;flex-direction:column;align-items:center;min-width:0}
+.about-project-grid>div>img,.contact-info-grid>div>i{flex-shrink:0}
+.about-project-grid>div>p,.contact-info-grid>div>p{margin-top:auto;padding-top:4px;max-width:100%;overflow-wrap:anywhere}
+@media(max-width:1023px){.gallery-grid{grid-template-columns:repeat(2,minmax(0,300px))}}
+@media(max-width:639px){.gallery-grid{grid-template-columns:minmax(0,300px)}}

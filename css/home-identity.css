@@ -103,4 +103,12 @@
 @media(max-width:1023px){.hp-benefits{gap:18px;grid-template-columns:1fr}.hp-hero-intro{font-size:14px}.hp-hero-actions{gap:18px}.hp-hero-visual img{aspect-ratio:4/5}}
 @media(max-width:639px){.hp-home>.hp-hero{padding-top:30px}.hp-hero-frame{gap:32px}.hp-hero h1{font-size:50px}.hp-hero-intro{max-width:340px;font-size:14px}.hp-hero-visual img{aspect-ratio:1}.hp-hero-caption{font-size:24px}.hp-hero-caption span:last-child{display:block;margin-top:4px;font-size:12px}.hp-benefits{grid-template-columns:1fr 1fr;gap:20px}.hp-benefits li{font-size:12px;line-height:1.8}.hp-category img{aspect-ratio:4/5}.hp-project:has(.hp-project-image) .hp-project-type{font-size:10px;top:12px;left:12px}}
 
+/* Keep card edges and their final actions aligned, including longer descriptions. */
+.hp-feature-grid,.hp-project-grid,.hp-category-grid{align-items:stretch}
+.hp-feature,.hp-project,.hp-category{display:flex;flex-direction:column;min-width:0}
+.hp-feature-image,.hp-project-image,.hp-category>img{flex-shrink:0}
+.hp-feature-caption,.hp-project-body{display:flex;flex-direction:column;flex:1}
+.hp-feature-caption>p{margin-top:auto}
+.hp-project-body>.hp-project-link{margin-top:auto;align-self:flex-start}
+.hp-category>h3{margin-top:auto}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
