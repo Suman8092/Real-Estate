@@ -1,5 +1,5 @@
 /* Shared interaction states. Colors come exclusively from the logo palette. */
-html{scroll-behavior:smooth;font-family:'Poppins',Arial,sans-serif}
+html,body{scroll-behavior:smooth;font-family:'Poppins',Arial,sans-serif;overflow-x:hidden;max-width:100%}
 .nav-link{position:relative}
 .nav-link::after{content:'';position:absolute;width:0;height:2px;bottom:0;left:50%;background:var(--brand-gold);transition:width .2s;transform:translateX(-50%)}
 .nav-link:hover::after,.nav-link.active::after{width:80%}

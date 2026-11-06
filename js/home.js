@@ -1,4 +1,3 @@
-import homeIdentityCss from '../css/home-identity.css?inline';
 import { initHomeWidgets, openHomeEnquiry } from './home-widgets.js';
 const host = document.getElementById('homepage-content');
 let root = host?.shadowRoot;
@@ -11,9 +10,6 @@ if (!root && host) {
   }
 }
 if (root) {
-  const style = document.createElement('style');
-  style.textContent = homeIdentityCss;
-  root.append(style);
   const headerElement = document.getElementById('pp-home-header');
   if (headerElement) {
     const updateHeaderOffset = () => host.style.setProperty('--home-header-offset', `${headerElement.getBoundingClientRect().height + 16}px`);
@@ -56,10 +52,34 @@ if (root) {
       other.classList.toggle('active', other === button);
       other.setAttribute('aria-pressed', String(other === button));
     });
-    available = thumbs.map((_, i) => i).filter(i => button.dataset.city === 'all' || cities[i] === button.dataset.city);
+    const targetCity = (button.dataset.city || '').toLowerCase().trim();
+    available = thumbs.map((_, i) => i).filter(i => {
+      if (targetCity === 'all') return true;
+      const panelCities = (cities[i] || '').toLowerCase().split(',').map(s => s.trim());
+      return panelCities.includes(targetCity);
+    });
     thumbs.forEach((thumb, i) => { thumb.hidden = !available.includes(i); });
-    selectProject(available[0]);
+    if (available.length > 0) {
+      selectProject(available[0]);
+    }
   }));
+  const searchInput = root.getElementById('pp-search-input');
+  if (searchInput) {
+    searchInput.addEventListener('input', () => {
+      const q = searchInput.value.trim().toLowerCase();
+      available = thumbs.map((_, i) => i).filter(i => {
+        if (!q) return true;
+        const panel = panels[i];
+        const text = (panel?.textContent || '').toLowerCase();
+        const city = (cities[i] || '').toLowerCase();
+        return text.includes(q) || city.includes(q);
+      });
+      thumbs.forEach((thumb, i) => { thumb.hidden = !available.includes(i); });
+      if (available.length > 0) {
+        selectProject(available[0]);
+      }
+    });
+  }
   root.querySelectorAll('[data-scroll]').forEach(button => button.addEventListener('click', () => {
     const rail = root.getElementById(button.dataset.scroll);
     rail.scrollBy({ left: rail.clientWidth * Number(button.dataset.direction) * .8, behavior: reducedMotion() ? 'instant' : 'smooth' });
