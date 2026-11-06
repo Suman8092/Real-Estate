@@ -362,11 +362,11 @@ export default [
     "priceNote": "Delhi's tallest landmark 100-meter luxury towers overlooking Asola Wildlife Sanctuary.",
     "bhk": "3, 4 BHK & Sky Penthouses",
     "description": "Soaring 100 meters above the prestigious farmhouse belt of Chattarpur, Risland Sky Mansion is Delhi's premier skyscraper development offering uninterrupted 360-degree sanctuary views.",
-    "image": "images/d1.jpg",
+    "image": "images/risland-sky-mansion.jpg",
     "href": "properties/project-risland-sky-mansion.html",
     "categoryHref": "properties/project-risland-sky-mansion.html",
     "gallery": [
-      "images/d1.jpg",
+      "images/risland-sky-mansion.jpg",
       "images/d2.jpg",
       "images/d3.jpg"
     ]

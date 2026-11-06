@@ -823,8 +823,8 @@ properties = [
         "superArea": "3,300 – 11,000 sq. ft.",
         "possessionDate": "Ready to Move",
         "reraNumber": "DLRERA2018P0014",
-        "image": "images/d1.jpg",
-        "gallery": ["images/d1.jpg", "images/d2.jpg", "images/d3.jpg"],
+        "image": "images/risland-sky-mansion.jpg",
+        "gallery": ["images/risland-sky-mansion.jpg", "images/d2.jpg", "images/d3.jpg"],
         "overview": "Soaring 100 meters above the prestigious farmhouse belt of Chattarpur, Risland Sky Mansion is Delhi's premier skyscraper development offering uninterrupted 360-degree sanctuary views.",
         "description": "With just 2 mansions per core and private elevators, Sky Mansion offers palatial ceiling heights, a 33,000 sq. ft. club, Olympic-standard lap pool, and lush curated forest landscapes.",
         "highlights": [
