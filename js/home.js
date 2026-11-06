@@ -27,7 +27,7 @@ if (root) {
   const scrollToSection = id => root.getElementById(id)?.scrollIntoView({ behavior: reducedMotion() ? 'instant' : 'smooth', block: 'start' });
   const panels = [...root.querySelectorAll('[data-panel]')];
   const thumbs = [...root.querySelectorAll('[data-project-index]')];
-  let active = 0;
+  let active = 7;
   let available = thumbs.map((_, index) => index);
   function selectProject(index, reveal = false) {
     active = index;
@@ -54,7 +54,7 @@ if (root) {
   }));
   const cities = panels.map(panel => panel.dataset.city);
   const cityButtons = [...root.querySelectorAll('.pp-tabs button[data-city]')];
-  cityButtons.forEach(button => button.addEventListener('click', () => {
+  function filterByCity(button) {
     cityButtons.forEach(other => {
       other.classList.toggle('active', other === button);
       other.setAttribute('aria-pressed', String(other === button));
@@ -69,7 +69,12 @@ if (root) {
     if (available.length > 0) {
       selectProject(available[0]);
     }
-  }));
+  }
+  cityButtons.forEach(button => button.addEventListener('click', () => filterByCity(button)));
+  const initialCityBtn = cityButtons.find(b => b.classList.contains('active')) || cityButtons[0];
+  if (initialCityBtn) {
+    filterByCity(initialCityBtn);
+  }
   const searchInput = root.getElementById('pp-search-input');
   if (searchInput) {
     searchInput.addEventListener('input', () => {
