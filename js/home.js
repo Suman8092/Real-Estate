@@ -1,3 +1,4 @@
+import homeIdentityCss from '../css/home-identity.css?inline';
 import { initHomeWidgets, openHomeEnquiry } from './home-widgets.js';
 const host = document.getElementById('homepage-content');
 let root = host?.shadowRoot;
@@ -10,6 +11,12 @@ if (!root && host) {
   }
 }
 if (root) {
+  if (!root.querySelector('style[data-identity]')) {
+    const style = document.createElement('style');
+    style.setAttribute('data-identity', 'true');
+    style.textContent = homeIdentityCss;
+    root.prepend(style);
+  }
   const headerElement = document.getElementById('pp-home-header');
   if (headerElement) {
     const updateHeaderOffset = () => host.style.setProperty('--home-header-offset', `${headerElement.getBoundingClientRect().height + 16}px`);
