@@ -1519,8 +1519,8 @@ properties = [
         "superArea": "3,200 – 3,900 sq. ft.",
         "possessionDate": "October 2028",
         "reraNumber": "RC/REP/HARERA/GGM/816/548/2024/43",
-        "image": "images/d4.jpg",
-        "gallery": ["images/d4.jpg", "images/v1.jpg", "images/v2.jpg"],
+        "image": "images/bptp-the-amaario.jpg",
+        "gallery": ["images/bptp-the-amaario.jpg", "images/v1.jpg", "images/v2.jpg"],
         "overview": "BPTP The Amaario in Sector 37D Gurugram offers super-exclusive 4 BHK residences centered around an unprecedented 70,000 sq. ft. club palace, heated indoor pool, and private fine-dining salons.",
         "description": "With just 2 apartments per core, 3 parking slots per home, and 12-ft wide continuous sundecks, The Amaario is engineered for connoisseurs of generous, private residential architecture.",
         "highlights": [

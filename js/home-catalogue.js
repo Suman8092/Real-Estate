@@ -674,11 +674,11 @@ export default [
     "priceNote": "Ultra-luxury 4 BHK residences with massive 70,000 sq. ft. clubhouse.",
     "bhk": "4 BHK + Servant Room Luxury Residences",
     "description": "BPTP The Amaario in Sector 37D Gurugram offers super-exclusive 4 BHK residences centered around an unprecedented 70,000 sq. ft. club palace, heated indoor pool, and private fine-dining salons.",
-    "image": "images/d4.jpg",
+    "image": "images/bptp-the-amaario.jpg",
     "href": "properties/project-bptp-the-amaario.html",
     "categoryHref": "properties/project-bptp-the-amaario.html",
     "gallery": [
-      "images/d4.jpg",
+      "images/bptp-the-amaario.jpg",
       "images/v1.jpg",
       "images/v2.jpg"
     ]
