@@ -96,6 +96,18 @@ export function initHomeFeatures(root) {
   }
   // Gallery controls use only project-matched images from the source catalogue.
   const galleryStates=[];
+  let timer=null;
+  function startAutoAdvance(){
+    if(timer)clearInterval(timer);
+    if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+    timer=setInterval(()=>{
+      if(document.hidden||dialog?.open)return;
+      const activeGallery=galleryStates.find(state=>!state.gallery.closest('[hidden]'));
+      if(activeGallery)activeGallery.advance();
+      else root.querySelector('[data-project-step="1"]')?.click();
+    },6000);
+  }
+
   root.querySelectorAll('.pp-gallery').forEach(gallery=>{
     const imgs=[...gallery.querySelectorAll('img')];const dots=[...gallery.querySelectorAll('[data-photo]')];let index=0,paused=false;
     const pause=gallery.querySelector('.pp-gallery-pause');
@@ -111,29 +123,38 @@ export function initHomeFeatures(root) {
         dot.setAttribute('aria-pressed',String(i===index));
         if(i<index)dot.setAttribute('data-completed','true');
       });
+      if(!paused && !gallery.closest('[hidden]')) startAutoAdvance();
     }
     dots.forEach((dot,i)=>dot.addEventListener('click',()=>show(i)));
-    gallery.querySelector('.pp-gallery-prev')?.addEventListener('click',()=>show(index-1));
-    gallery.querySelector('.pp-gallery-next')?.addEventListener('click',()=>show(index+1));
+    gallery.querySelector('.pp-gallery-prev')?.addEventListener('click',()=>{
+      if(imgs.length>1)show(index-1);
+      else root.querySelector('[data-project-step="-1"]')?.click();
+    });
+    gallery.querySelector('.pp-gallery-next')?.addEventListener('click',()=>{
+      if(imgs.length>1)show(index+1);
+      else root.querySelector('[data-project-step="1"]')?.click();
+    });
     pause?.addEventListener('click',()=>{
       paused=!paused;
       gallery.classList.toggle('is-paused',paused);
       pause.textContent=paused?'▶':'Ⅱ';
       pause.setAttribute('aria-pressed',String(paused));
-      pause.setAttribute('aria-label',paused?'Play project photos':'Pause project photos');
+      pause.setAttribute('aria-label',paused?'Play project timer':'Pause project timer');
+      if(paused){if(timer)clearInterval(timer);}
+      else startAutoAdvance();
     });
-    let start=0;gallery.addEventListener('touchstart',event=>{start=event.changedTouches[0].clientX;},{passive:true});gallery.addEventListener('touchend',event=>{const delta=event.changedTouches[0].clientX-start;if(Math.abs(delta)>45)show(index+(delta<0?1:-1));},{passive:true});
+    let start=0;gallery.addEventListener('touchstart',event=>{start=event.changedTouches[0].clientX;},{passive:true});gallery.addEventListener('touchend',event=>{const delta=event.changedTouches[0].clientX-start;if(Math.abs(delta)>45){
+      if(imgs.length>1)show(index+(delta<0?1:-1));
+      else root.querySelector(`[data-project-step="${delta<0?1:-1}"]`)?.click();
+    }},{passive:true});
     galleryStates.push({gallery,advance:()=>{
       if(paused||gallery.closest('[hidden]'))return;
       if(index===imgs.length-1){show(0);root.querySelector('[data-project-step="1"]').click();}
       else show(index+1);
     }});
   });
-  if(!matchMedia('(prefers-reduced-motion: reduce)').matches && galleryStates.length > 0){const timer=setInterval(()=>{
-    if(document.hidden||dialog.open)return;
-    const activeGallery=galleryStates.find(state=>!state.gallery.closest('[hidden]'));
-    if(activeGallery)activeGallery.advance();
-  },6000);window.addEventListener('pagehide',()=>clearInterval(timer),{once:true});}
+  if(galleryStates.length>0)startAutoAdvance();
+  window.addEventListener('pagehide',()=>{if(timer)clearInterval(timer);},{once:true});
   // Tools calculate from user-supplied values. No property prices or statutory rates are fabricated.
   const field=(label,name,extra='')=>`<label class="pp-tool-label">${label}<input name="${name}" ${extra} required/></label>`;
   const numeric='type="number" min="0" step="any"';
