@@ -100,4 +100,39 @@ export function initHomeWidgets(root){
   // Crisp SVG controls replace font-dependent placeholder glyphs.
   root.querySelectorAll('[data-share]').forEach(button=>button.innerHTML=icon('share',14)+'<span>Share Details</span>');
   root.querySelectorAll('.pp-card-actions .pp-button').forEach(button=>button.innerHTML=icon('phone',14)+'<span>Contact Now</span>');
+
+  function openCityProjects(cityName){
+    const cleanCity=(cityName||'').split(',')[0].trim();
+    const tab=root.querySelector(`.pp-tabs button[data-city="${cleanCity}"]`)||root.querySelector(`.pp-tabs button[data-city="${cityName}"]`);
+    if(tab&&!tab.classList.contains('active')){
+      tab.click();
+    }
+    const target=cleanCity.toLowerCase();
+    const matches=catalogue.filter(p=>{
+      const pCity=(p.city||'').toLowerCase();
+      return pCity.includes(target)||target.includes(pCity);
+    });
+    if(!matches.length){
+      open(`Projects in ${cleanCity}`,`<p class="pp-dialog-note">No other projects found currently listed for ${safe(cleanCity)}.</p>`);
+      return;
+    }
+    const countText=`${matches.length} ${matches.length===1?'Project':'Projects'}`;
+    const heading=`All Projects in ${cleanCity} (${countText})`;
+    const html=`<p class="pp-dialog-note">Explore all verified residential and commercial developments located in <strong>${safe(cleanCity)}</strong>.</p><div class="pp-city-projects-grid">${matches.map(p=>`<article class="pp-city-card"><div class="pp-city-card-media"><img src="${homeMedia(p.image)}" alt="${safe(p.name)}" loading="lazy" /><span class="pp-city-card-badge">${safe(p.status||'Active')}</span></div><div class="pp-city-card-body"><span class="pp-city-card-dev">${safe(p.developer)}</span><h3>${safe(p.name)}</h3><p class="pp-city-card-loc">${icon('location',14)} <span>${safe(p.location)}</span></p><div class="pp-city-card-meta"><span>${safe(p.bhk||p.categoryName||'Luxury Residences')}</span></div><div class="pp-city-card-price"><small>Pricing</small><strong>${safe(p.price)}</strong></div><div class="pp-city-card-actions"><a href="${p.href}" class="pp-btn-view-details">Explore Project</a><button type="button" class="pp-btn-enquire" data-city-enquire="${safe(p.name)}">Contact Us</button></div></div></article>`).join('')}</div>`;
+    open(heading,html);
+    content.querySelectorAll('[data-city-enquire]').forEach(btn=>{
+      btn.addEventListener('click',()=>{
+        dialog.close();
+        openHomeEnquiry(btn.dataset.cityEnquire,root);
+      });
+    });
+  }
+
+  root.querySelectorAll('.pp-view-projects-link').forEach(button=>{
+    button.addEventListener('click',event=>{
+      event.preventDefault();
+      const city=button.dataset.viewCity||button.closest('[data-city]')?.dataset.city||'Noida';
+      openCityProjects(city);
+    });
+  });
 }

@@ -113,8 +113,9 @@ export function initHomeFeatures(root) {
       });
     }
     dots.forEach((dot,i)=>dot.addEventListener('click',()=>show(i)));
-    gallery.querySelector('.pp-gallery-prev').addEventListener('click',()=>show(index-1));gallery.querySelector('.pp-gallery-next').addEventListener('click',()=>show(index+1));
-    pause.addEventListener('click',()=>{
+    gallery.querySelector('.pp-gallery-prev')?.addEventListener('click',()=>show(index-1));
+    gallery.querySelector('.pp-gallery-next')?.addEventListener('click',()=>show(index+1));
+    pause?.addEventListener('click',()=>{
       paused=!paused;
       gallery.classList.toggle('is-paused',paused);
       pause.textContent=paused?'▶':'Ⅱ';
@@ -128,13 +129,10 @@ export function initHomeFeatures(root) {
       else show(index+1);
     }});
   });
-  if(!matchMedia('(prefers-reduced-motion: reduce)').matches){const timer=setInterval(()=>{
+  if(!matchMedia('(prefers-reduced-motion: reduce)').matches && galleryStates.length > 0){const timer=setInterval(()=>{
     if(document.hidden||dialog.open)return;
     const activeGallery=galleryStates.find(state=>!state.gallery.closest('[hidden]'));
     if(activeGallery)activeGallery.advance();
-    else {
-      root.querySelector('[data-project-step="1"]').click();
-    }
   },6000);window.addEventListener('pagehide',()=>clearInterval(timer),{once:true});}
   // Tools calculate from user-supplied values. No property prices or statutory rates are fabricated.
   const field=(label,name,extra='')=>`<label class="pp-tool-label">${label}<input name="${name}" ${extra} required/></label>`;
