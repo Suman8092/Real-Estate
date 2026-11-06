@@ -931,8 +931,8 @@ properties = [
         "superArea": "1,150 – 1,850 sq. ft.",
         "possessionDate": "July 2027",
         "reraNumber": "UPRERAPRJ954128",
-        "image": "images/v1.jpg",
-        "gallery": ["images/v1.jpg", "images/v2.jpg", "images/v3.jpg"],
+        "image": "images/eldeco-ballads-of-bliss.jpg",
+        "gallery": ["images/eldeco-ballads-of-bliss.jpg", "images/v2.jpg", "images/v3.jpg"],
         "overview": "Eldeco Ballads of Bliss is an inspired residential enclave in Sector 12, Greater Noida West. Designed with harmonious music-themed gardens, expansive balconies, and seamless metro access.",
         "description": "Constructed with Eldeco's 40-year legacy of engineering excellence, this gated society features vaastu-compliant homes, dedicated sports arenas, and family recreational spaces.",
         "highlights": [

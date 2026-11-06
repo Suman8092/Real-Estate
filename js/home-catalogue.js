@@ -410,11 +410,11 @@ export default [
     "priceNote": "Modern 2 and 3 BHK homes with music-themed landscapes and open parks.",
     "bhk": "2 & 3 BHK Contemporary Homes",
     "description": "Eldeco Ballads of Bliss is an inspired residential enclave in Sector 12, Greater Noida West. Designed with harmonious music-themed gardens, expansive balconies, and seamless metro access.",
-    "image": "images/v1.jpg",
+    "image": "images/eldeco-ballads-of-bliss.jpg",
     "href": "properties/project-eldeco-ballads-of-bliss.html",
     "categoryHref": "properties/project-eldeco-ballads-of-bliss.html",
     "gallery": [
-      "images/v1.jpg",
+      "images/eldeco-ballads-of-bliss.jpg",
       "images/v2.jpg",
       "images/v3.jpg"
     ]
