@@ -32,11 +32,11 @@ body[data-home-design="project-first"]>#pp-home-footer{background:#000000!import
 #pp-home-footer a:hover{color:#BE851A}
 #pp-home-footer .pp-footer-main{max-width:1380px;width:100%;margin:auto;display:grid;grid-template-columns:1.2fr .8fr .7fr 1.2fr 1fr;gap:28px;padding:48px 34px 60px;box-sizing:border-box}
 #pp-home-footer h2{font:600 13px/1.5 Poppins,Arial,sans-serif;color:#FFFFFF;margin:0 0 18px}
-#pp-home-footer .pp-footer-main>div>a{margin-bottom:13px}
+#pp-home-footer .pp-footer-main>div>a,#pp-home-footer .pp-footer-contact>a{margin-bottom:13px}
 #pp-home-footer .pp-footer-brand>p{font-size:22px;line-height:1.5;margin:0 0 24px}
 #pp-home-footer .pp-footer-brand img{width:230px;height:auto;max-width:100%;padding:12px;background:#FFFFFF;border-radius:4px}
 #pp-home-footer .pp-footer-reach{min-width:0;overflow-wrap:anywhere}
-#pp-home-footer .pp-footer-reach h2:nth-of-type(2){margin-top:24px;margin-bottom:8px}
+#pp-home-footer .pp-footer-address h2{margin-top:24px;margin-bottom:8px}
 #pp-home-footer .pp-footer-reach p{max-width:310px}
 #pp-home-footer .pp-footer-bottom{border-top:1px solid #4C4B47;padding:24px 34px;max-width:1380px;margin:0 auto;display:flex;gap:24px;align-items:center;justify-content:space-between;font-size:11px;color:#FFFFFF;box-sizing:border-box}
 
@@ -121,7 +121,7 @@ body[data-home-design="project-first"]>#pp-home-footer{background:#FFFFFF!import
 #pp-home-footer .pp-footer-locations>a[data-home-city="Pune"]{display:none}
 }
 
-/* Mobile footer: links first, then locations beside contact and address. */
+/* Mobile footer: links first, then locations, contact, and the address below. */
 @media(max-width:639px){
 #pp-home-footer .pp-footer-main{grid-template-columns:repeat(2,minmax(0,1fr));column-gap:22px;row-gap:30px}
 #pp-home-footer .pp-footer-brand{grid-column:1/-1;grid-row:1}
@@ -129,8 +129,10 @@ body[data-home-design="project-first"]>#pp-home-footer{background:#FFFFFF!import
 #pp-home-footer .pp-footer-main>div:nth-child(3){grid-column:2;grid-row:2}
 #pp-home-footer .pp-footer-locations{grid-column:1;grid-row:3;min-width:0}
 #pp-home-footer .pp-footer-locations>a{display:block;margin-right:0;margin-bottom:13px}
-#pp-home-footer .pp-footer-reach{grid-column:2;grid-row:3;min-width:0;overflow-wrap:anywhere}
-#pp-home-footer .pp-footer-reach h2:nth-of-type(2){margin-top:24px}
+#pp-home-footer .pp-footer-reach{display:contents}
+#pp-home-footer .pp-footer-contact{grid-column:2;grid-row:3;min-width:0;overflow-wrap:anywhere}
+#pp-home-footer .pp-footer-address{grid-column:1/-1;grid-row:4;text-align:left}
+#pp-home-footer .pp-footer-address h2{margin-top:0}
 #pp-home-footer .pp-footer-main a,#pp-home-footer .pp-footer-main p{font-size:12px;line-height:1.75}
 #pp-home-footer .pp-footer-brand>p{font-size:17px;line-height:1.5}
 #pp-home-footer .pp-footer-main h2{font-size:11px}
