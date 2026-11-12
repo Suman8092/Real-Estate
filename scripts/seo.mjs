@@ -14,9 +14,9 @@ const descriptions = {
   'commercial.html': 'Explore Lifestyle Central, BNX Group and EON Fairfox. Review commercial project information and contact Premium Properties.',
   'farmhouses.html': 'Explore farmhouse and holiday-home project information for Vantara Heritage, Anantara and Casa Corbett.',
   'industrial.html': 'Contact Premium Properties for industrial property enquiries. No verified industrial listings are currently published.',
-  'gallery.html': 'Explore images of Vrindaan, Lifestyle Central, BNX Group, Casa Corbett and Anantara.'
+  'properties.html': 'Browse all listed Premium Property Depot projects and view property details, photos and locations.'
 };
-const pages = readdirSync('.').filter(file => file.endsWith('.html'));
+const pages = readdirSync('.').filter(file => file.endsWith('.html') && file !== 'gallery.html');
 for (const file of pages) {
   let html = readFileSync(file, 'utf8').replace(/\s*<!-- production-seo:start -->[\s\S]*?<!-- production-seo:end -->/g, '');
   if (!/<meta name="description"/.test(html)) html = html.replace('</title>', `</title>\n  <meta name="description" content="${escape(descriptions[file])}" />`);

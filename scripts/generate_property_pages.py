@@ -73,7 +73,7 @@ def generate_property_page(prop, all_props):
         <a href="../residential.html">Residential</a>
         <a href="../commercial.html">Commercial</a>
         <a href="../farmhouses.html">Farm Houses</a>
-        <a href="../gallery.html">Gallery</a>
+        <a href="../properties.html">Properties</a>
         <a href="../contact.html">Contact Us</a>
       </nav>
       <div class="prop-header-actions">
