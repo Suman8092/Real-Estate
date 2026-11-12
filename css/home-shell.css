@@ -62,3 +62,13 @@ body[data-home-design="project-first"]>#pp-home-header{background:#000000!import
 #pp-home-header a.pp-contact-button{border:1px solid #FFFFFF}
 #pp-home-header a.pp-contact-button:hover{background:#4C4B47}
 #pp-home-header a:focus-visible,#pp-home-header summary:focus-visible{outline:2px solid #FFFFFF;outline-offset:4px}
+
+#pp-home-header .pp-home-properties{position:relative;display:flex;align-items:center;gap:2px}
+#pp-home-header .pp-home-properties>.pp-nav-dropdown{position:static}
+#pp-home-header .pp-home-properties summary{min-width:32px;min-height:36px;justify-content:center}
+#pp-home-header .pp-home-properties summary::after{margin-left:0}
+@media(max-width:900px){
+  #pp-home-header .pp-home-properties{display:block}
+  #pp-home-header .pp-home-properties>a{display:block;padding:12px 44px 12px 0;font-size:14px}
+  #pp-home-header .pp-home-properties summary{position:absolute;top:0;right:0;min-width:44px;min-height:44px}
+}

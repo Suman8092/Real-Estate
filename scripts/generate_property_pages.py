@@ -70,7 +70,7 @@ def generate_property_page(prop, all_props):
       <nav class="prop-nav" aria-label="Main navigation">
         <a href="../index.html">Home</a>
         <a href="../about.html">About Us</a>
-        <a href="../properties.html">All Properties</a>
+        <a href="../properties.html">Properties</a>
         <a href="../residential.html">Residential</a>
         <a href="../commercial.html">Commercial</a>
         <a href="../farmhouses.html">Farm Houses</a>
