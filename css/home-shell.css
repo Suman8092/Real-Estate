@@ -100,3 +100,10 @@ body[data-home-design="project-first"]>#pp-home-header{background:#000000!import
 body[data-home-design="project-first"]>#pp-home-footer{background:#FFFFFF!important;color:#000000!important}
 #pp-home-footer a,#pp-home-footer a:hover,#pp-home-footer h2,#pp-home-footer p,#pp-home-footer .pp-footer-bottom{color:#000000}
 #pp-home-footer .pp-footer-bottom{border-top-color:#D8D8D8}
+
+/* Align the footer brand with its tagline and neighboring columns. */
+#pp-home-footer .pp-footer-brand{display:flex;flex-direction:column;align-items:flex-start;gap:22px}
+#pp-home-footer .pp-footer-brand>p{margin:0;font-size:22px;line-height:1.5;text-align:left}
+#pp-home-footer .pp-footer-brand>a{display:block;width:min(230px,100%);margin:0;padding:0;line-height:0}
+#pp-home-footer .pp-footer-brand img{display:block;width:100%;max-width:100%;height:auto;margin:0;padding:0;background:transparent;border-radius:0;object-fit:contain;object-position:left center}
+@media(max-width:480px){#pp-home-footer .pp-footer-brand{gap:18px}#pp-home-footer .pp-footer-brand>a{width:210px}}
