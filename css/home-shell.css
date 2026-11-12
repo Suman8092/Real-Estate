@@ -78,7 +78,6 @@ body[data-home-design="project-first"]>#pp-home-footer{background:#000000!import
   #pp-home-footer .pp-footer-brand{grid-column:1/-1}
   #pp-home-footer .pp-footer-brand>p{font-size:23px;margin-bottom:18px}
   #pp-home-footer .pp-footer-brand img{width:210px}
-  #pp-home-footer .pp-footer-reach{grid-column:1/-1}
   #pp-home-footer .pp-footer-bottom{padding:22px;gap:15px}
   #pp-home-footer .pp-footer-bottom>p{max-width:260px}
 }
@@ -119,26 +118,17 @@ body[data-home-design="project-first"]>#pp-home-footer{background:#FFFFFF!import
 #pp-home-footer .pp-footer-locations>a[data-home-city="Uttrakhand"],
 #pp-home-footer .pp-footer-locations>a[data-home-city="Haryana"]{display:none}
 
-/* Mobile footer: links first, then locations, contact, and the address below. */
+/* Mobile footer: show the brand and the two link columns. */
 @media(max-width:639px){
 #pp-home-footer .pp-footer-main{grid-template-columns:repeat(2,minmax(0,1fr));column-gap:22px;row-gap:30px}
 #pp-home-footer .pp-footer-brand{grid-column:1/-1;grid-row:1}
 #pp-home-footer .pp-footer-main>div:nth-child(2){grid-column:1;grid-row:2}
 #pp-home-footer .pp-footer-main>div:nth-child(3){grid-column:2;grid-row:2}
-#pp-home-footer .pp-footer-locations{grid-column:1;grid-row:3;min-width:0}
-#pp-home-footer .pp-footer-locations>a{display:block;margin-right:0;margin-bottom:13px}
-#pp-home-footer .pp-footer-reach{display:contents}
-#pp-home-footer .pp-footer-contact{grid-column:2;grid-row:3;min-width:0;overflow-wrap:anywhere}
-#pp-home-footer .pp-footer-address{grid-column:1/-1;grid-row:4;text-align:left}
-#pp-home-footer .pp-footer-address h2{margin-top:0}
+#pp-home-footer .pp-footer-locations,
+#pp-home-footer .pp-footer-reach{display:none}
 #pp-home-footer .pp-footer-main a,#pp-home-footer .pp-footer-main p{font-size:12px;line-height:1.75}
 #pp-home-footer .pp-footer-brand>p{font-size:17px;line-height:1.5}
 #pp-home-footer .pp-footer-main h2{font-size:11px}
-}
-
-@media(max-width:639px){
-#pp-home-footer .pp-footer-locations>a[data-home-city="Gujrat"],
-#pp-home-footer .pp-footer-locations>a[data-home-city="Pune"]{display:none}
 }
 
 @media(min-width:1024px){#pp-home-footer .pp-footer-brand>p{font-weight:600}}
