@@ -126,6 +126,7 @@ body[data-home-design="project-first"]>#pp-home-footer{background:#FFFFFF!import
 #pp-home-footer .pp-footer-main{grid-template-columns:repeat(2,minmax(0,1fr));column-gap:22px;row-gap:30px}
 #pp-home-footer .pp-footer-brand{grid-column:1/-1;grid-row:1}
 #pp-home-footer .pp-footer-main>div:nth-child(2){grid-column:1;grid-row:2}
+#pp-home-footer .pp-footer-main>div>a[href="industrial.html"]{display:none}
 #pp-home-footer .pp-footer-main>div:nth-child(3){grid-column:2;grid-row:2}
 #pp-home-footer .pp-footer-locations{grid-column:1;grid-row:3;min-width:0}
 #pp-home-footer .pp-footer-locations>a{display:block;margin-right:0;margin-bottom:13px}
