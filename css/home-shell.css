@@ -86,3 +86,17 @@ body[data-home-design="project-first"]>#enquiry-modal{z-index:120}
 body[data-home-design="project-first"]>#toast-notice{z-index:130}
 /* Supplied transparent white-text logo, used only on the homepage's dark footer. */
 #pp-home-footer .pp-footer-brand img.pp-footer-logo-transparent{width:200px;height:auto;padding:0;background:transparent;border-radius:0}
+
+/* Dark header with white navigation on desktop and mobile. */
+body[data-home-design="project-first"]>#pp-home-header{background:#000000!important;color:#FFFFFF!important;border-bottom-color:#4C4B47}
+#pp-home-header a,#pp-home-header a:hover,#pp-home-header a[aria-current],#pp-home-header summary,#pp-home-header .pp-header-contact small,#pp-home-header .pp-header-contact a,#pp-home-header .pp-header-contact a:hover,#pp-home-header .pp-mobile-navigation>summary{color:#FFFFFF}
+#pp-home-header .pp-nav-dropdown>div,#pp-home-header .pp-mobile-navigation>nav{background:#000000;border-color:#4C4B47}
+#pp-home-header .pp-header-contact{border-left-color:#4C4B47}
+#pp-home-header a.pp-contact-button{border:1px solid #FFFFFF}
+#pp-home-header a.pp-contact-button:hover{background:#4C4B47}
+#pp-home-header a:focus-visible,#pp-home-header summary:focus-visible{outline:2px solid #FFFFFF;outline-offset:4px}
+
+/* White homepage footer. */
+body[data-home-design="project-first"]>#pp-home-footer{background:#FFFFFF!important;color:#000000!important}
+#pp-home-footer a,#pp-home-footer a:hover,#pp-home-footer h2,#pp-home-footer p,#pp-home-footer .pp-footer-bottom{color:#000000}
+#pp-home-footer .pp-footer-bottom{border-top-color:#D8D8D8}

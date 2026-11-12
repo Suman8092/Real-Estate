@@ -112,11 +112,17 @@ if (root) {
     });
     root.getElementById('showcase-rail').scrollLeft = 0;
   }));
-  let reviewIndex = 0;
-  const reviews = [...root.querySelectorAll('.pp-review')];
+  const reviewRail = root.getElementById('testimonial-rail');
   root.querySelectorAll('[data-review-step]').forEach(button => button.addEventListener('click', () => {
-    reviewIndex = (reviewIndex + Number(button.dataset.reviewStep) + reviews.length) % reviews.length;
-    reviews.forEach((review, i) => { review.hidden = i !== reviewIndex; });
+    if (!reviewRail) return;
+    const direction = Number(button.dataset.reviewStep);
+    const maxScroll = reviewRail.scrollWidth - reviewRail.clientWidth;
+    const card = reviewRail.querySelector('.pp-review');
+    const step = card.getBoundingClientRect().width + parseFloat(getComputedStyle(reviewRail).columnGap);
+    const target = direction > 0 && reviewRail.scrollLeft >= maxScroll - 2 ? 0
+      : direction < 0 && reviewRail.scrollLeft <= 2 ? maxScroll
+      : reviewRail.scrollLeft + direction * step;
+    reviewRail.scrollTo({ left: target, behavior: reducedMotion() ? 'instant' : 'smooth' });
   }));
   root.querySelectorAll('a[href^="#"]').forEach(link => link.addEventListener('click', event => {
     const id = link.getAttribute('href').slice(1);
