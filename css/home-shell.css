@@ -137,3 +137,14 @@ body[data-home-design="project-first"]>#pp-home-footer{background:#FFFFFF!import
 }
 
 @media(max-width:639px){#pp-home-footer .pp-footer-locations>a[data-home-city="Gujrat"]{display:none}}
+
+@media(min-width:1024px){#pp-home-footer .pp-footer-brand>p{font-weight:600}}
+
+@media(max-width:639px){
+#pp-home-footer .pp-footer-brand{align-items:center}
+#pp-home-footer .pp-footer-brand>p{display:none}
+#pp-home-footer .pp-footer-brand>a{margin:0 auto}
+#pp-home-footer .pp-footer-bottom{flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:12px}
+#pp-home-footer .pp-footer-bottom>p{width:100%;max-width:none;text-align:center;margin:0}
+#pp-home-footer .pp-footer-bottom>a{margin:0 auto}
+}
