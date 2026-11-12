@@ -16,7 +16,7 @@ const descriptions = {
   'industrial.html': 'Contact Premium Properties for industrial property enquiries. No verified industrial listings are currently published.',
   'properties.html': 'Browse all listed Premium Property Depot projects and view property details, photos and locations.'
 };
-const pages = readdirSync('.').filter(file => file.endsWith('.html') && file !== 'gallery.html');
+const pages = readdirSync('.').filter(file => file.endsWith('.html'));
 for (const file of pages) {
   let html = readFileSync(file, 'utf8').replace(/\s*<!-- production-seo:start -->[\s\S]*?<!-- production-seo:end -->/g, '');
   if (!/<meta name="description"/.test(html)) html = html.replace('</title>', `</title>\n  <meta name="description" content="${escape(descriptions[file])}" />`);

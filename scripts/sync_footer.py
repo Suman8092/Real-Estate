@@ -26,7 +26,7 @@ def sync_footer(html, prefix):
 
 if __name__ == '__main__':
     for path in sorted([*ROOT.glob('*.html'), *(ROOT / 'properties').glob('*.html')]):
-        if path.name in {'index.html', 'gallery.html'}:
+        if path.name == 'index.html':
             continue
         prefix = '../' if path.parent != ROOT else ''
         html = path.read_bytes().decode('utf-8')
