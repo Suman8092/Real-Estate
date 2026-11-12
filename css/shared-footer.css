@@ -1,0 +1,79 @@
+/* Footer Base */
+#pp-home-footer{background:#FFFFFF!important;color:#000000!important;padding:0!important;border-top:0!important;margin-top:auto;font:400 13px/1.8 Poppins,Arial,sans-serif}
+#pp-home-footer a{color:#FFFFFF;text-decoration:none;display:block;width:fit-content}
+
+#pp-home-footer .pp-footer-main{max-width:1380px;width:100%;margin:auto;display:grid;grid-template-columns:1.2fr .8fr .7fr 1.2fr 1fr;gap:28px;padding:48px 34px 60px;box-sizing:border-box}
+#pp-home-footer h2{font:600 13px/1.5 Poppins,Arial,sans-serif;color:#FFFFFF;margin:0 0 18px}
+#pp-home-footer .pp-footer-main>div>a,#pp-home-footer .pp-footer-contact>a{margin-bottom:13px}
+#pp-home-footer .pp-footer-brand>p{font-size:22px;line-height:1.5;margin:0 0 24px}
+#pp-home-footer .pp-footer-brand img{width:230px;height:auto;max-width:100%;padding:12px;background:#FFFFFF;border-radius:4px}
+#pp-home-footer .pp-footer-reach{min-width:0;overflow-wrap:anywhere}
+#pp-home-footer .pp-footer-address h2{margin-top:24px;margin-bottom:8px}
+#pp-home-footer .pp-footer-reach p{max-width:310px}
+#pp-home-footer .pp-footer-bottom{border-top:1px solid #4C4B47;padding:24px 34px;max-width:1380px;margin:0 auto;display:flex;gap:24px;align-items:center;justify-content:space-between;font-size:11px;color:#FFFFFF;box-sizing:border-box}
+
+@media(min-width:1600px){#pp-home-footer .pp-footer-main,#pp-home-footer .pp-footer-bottom{max-width:1440px}}
+@media(max-width:1199px){
+  #pp-home-footer .pp-footer-main{padding:40px 24px 50px;gap:26px}
+  #pp-home-footer .pp-footer-bottom{padding:20px 24px}
+}
+@media(max-width:900px){
+  #pp-home-footer .pp-footer-main{padding:36px 20px 45px;grid-template-columns:1fr 1fr;gap:30px}
+  #pp-home-footer .pp-footer-bottom{padding:18px 20px;flex-wrap:wrap}
+  #pp-home-footer .pp-footer-locations{grid-column:1/-1}
+  #pp-home-footer .pp-footer-locations>a{display:inline-block;margin-right:20px}
+}
+@media(max-width:480px){
+  #pp-home-footer .pp-footer-main{padding:35px 22px;gap:28px 20px}
+  #pp-home-footer .pp-footer-brand{grid-column:1/-1}
+  #pp-home-footer .pp-footer-brand>p{font-size:23px;margin-bottom:18px}
+  #pp-home-footer .pp-footer-brand img{width:210px}
+  #pp-home-footer .pp-footer-bottom{padding:22px;gap:15px}
+  #pp-home-footer .pp-footer-bottom>p{max-width:260px}
+}
+
+#pp-home-footer a:hover{color:#9A6C14!important;text-decoration:underline;text-underline-offset:4px}
+#pp-home-footer a,#pp-home-footer h2,#pp-home-footer p,#pp-home-footer .pp-footer-bottom{color:#000000}
+#pp-home-footer .pp-footer-bottom{border-top-color:#D8D8D8}
+
+/* Align the footer brand with its tagline and neighboring columns. */
+#pp-home-footer .pp-footer-brand{display:flex;flex-direction:column;align-items:flex-start;gap:22px}
+#pp-home-footer .pp-footer-brand>p{margin:0;font-size:22px;line-height:1.5;text-align:left}
+#pp-home-footer .pp-footer-brand>a{display:block;width:min(230px,100%);margin:0;padding:0;line-height:0}
+#pp-home-footer .pp-footer-brand img{display:block;width:100%;max-width:100%;height:auto;margin:0;padding:0;background:transparent;border-radius:0;object-fit:contain;object-position:left center}
+@media(max-width:480px){#pp-home-footer .pp-footer-brand{gap:18px}#pp-home-footer .pp-footer-brand>a{width:210px}}
+
+/* One-line footer tagline with a compact, aligned brand block. */
+#pp-home-footer .pp-footer-brand{gap:18px}
+#pp-home-footer .pp-footer-brand>p{font-size:clamp(14px,1.1vw,17px);line-height:1.5;white-space:nowrap;letter-spacing:-.2px}
+#pp-home-footer .pp-footer-brand>a{width:min(210px,100%)}
+@media(max-width:639px){#pp-home-footer .pp-footer-brand{grid-column:1/-1;gap:16px}#pp-home-footer .pp-footer-brand>p{font-size:17px}#pp-home-footer .pp-footer-brand>a{width:190px}#pp-home-footer .pp-footer-main{row-gap:30px}#pp-home-footer .pp-footer-bottom{gap:12px;line-height:1.7}}
+
+#pp-home-footer .pp-footer-main>div>a[href$="industrial.html"],
+#pp-home-footer .pp-footer-locations>a[data-home-city="Greater Noida"],
+#pp-home-footer .pp-footer-locations>a[data-home-city="Uttrakhand"],
+#pp-home-footer .pp-footer-locations>a[data-home-city="Haryana"]{display:none}
+
+/* Mobile footer: show the brand and the two link columns. */
+@media(max-width:639px){
+#pp-home-footer .pp-footer-main{grid-template-columns:repeat(2,minmax(0,1fr));column-gap:22px;row-gap:30px}
+#pp-home-footer .pp-footer-brand{grid-column:1/-1;grid-row:1}
+#pp-home-footer .pp-footer-main>div:nth-child(2){grid-column:1;grid-row:2}
+#pp-home-footer .pp-footer-main>div:nth-child(3){grid-column:2;grid-row:2}
+#pp-home-footer .pp-footer-locations,
+#pp-home-footer .pp-footer-reach{display:none}
+#pp-home-footer .pp-footer-main a,#pp-home-footer .pp-footer-main p{font-size:12px;line-height:1.75}
+#pp-home-footer .pp-footer-brand>p{font-size:17px;line-height:1.5}
+#pp-home-footer .pp-footer-main h2{font-size:11px}
+}
+
+@media(min-width:1024px){#pp-home-footer .pp-footer-brand>p{font-weight:600}}
+
+@media(max-width:639px){
+#pp-home-footer .pp-footer-brand{align-items:center}
+#pp-home-footer .pp-footer-brand>p{display:none}
+#pp-home-footer .pp-footer-brand>a{margin:0 auto}
+#pp-home-footer .pp-footer-bottom{flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:12px}
+#pp-home-footer .pp-footer-bottom>p{width:100%;max-width:none;text-align:center;margin:0}
+#pp-home-footer .pp-footer-bottom>a{margin:0 auto}
+}

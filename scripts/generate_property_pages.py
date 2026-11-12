@@ -1,6 +1,8 @@
 import json
 import os
 
+from sync_footer import shared_footer
+
 with open('data/properties.json', 'r', encoding='utf-8') as f:
     properties = json.load(f)
 
@@ -56,6 +58,7 @@ def generate_property_page(prop, all_props):
   <link rel="stylesheet" href="../css/utilities.css" />
   <link rel="stylesheet" href="../css/custom.css" />
   <link rel="stylesheet" href="../css/property-detail.css" />
+  <link rel="stylesheet" href="../css/shared-footer.css" />
 </head>
 <body class="prop-detail-body">
   <!-- HEADER -->
@@ -350,51 +353,7 @@ def generate_property_page(prop, all_props):
   </main>
 
   <!-- FOOTER -->
-  <footer class="prop-detail-footer">
-    <div class="prop-container prop-footer-grid">
-      <div class="prop-footer-col">
-        <a href="../index.html">
-          <img src="../images/premium-property-depot-logo.png" alt="Premium Property Depot LLP" width="971" height="257" class="prop-footer-logo" />
-        </a>
-        <p class="prop-footer-motto">Your Property, Our Priority.<br/>Building Trust. Delivering Value.</p>
-      </div>
-      <div class="prop-footer-col">
-        <h4>Navigation</h4>
-        <ul>
-          <li><a href="../index.html">Home</a></li>
-          <li><a href="../about.html">About Us</a></li>
-          <li><a href="../residential.html">Residential</a></li>
-          <li><a href="../commercial.html">Commercial</a></li>
-          <li><a href="../farmhouses.html">Farm Houses</a></li>
-          <li><a href="../gallery.html">Gallery</a></li>
-          <li><a href="../contact.html">Contact Us</a></li>
-        </ul>
-      </div>
-      <div class="prop-footer-col">
-        <h4>Key Cities</h4>
-        <ul>
-          <li><a href="../index.html#projects">Delhi Properties</a></li>
-          <li><a href="../index.html#projects">Noida &amp; Greater Noida</a></li>
-          <li><a href="../index.html#projects">Pune High-Rises</a></li>
-          <li><a href="../index.html#projects">Gurugram Luxury</a></li>
-        </ul>
-      </div>
-      <div class="prop-footer-col">
-        <h4>Contact &amp; Address</h4>
-        <p>1401D, EON Fairfax, Sector 140A, Noida, Uttar Pradesh</p>
-        <p class="prop-footer-contact-links">
-          <a href="tel:+919415378938">+91 9415378938</a><br/>
-          <a href="tel:+919305486716">+91 9305486716</a><br/>
-          <a href="mailto:info@premiumpropertydepot.com">info@premiumpropertydepot.com</a>
-        </p>
-      </div>
-    </div>
-    <div class="prop-footer-bottom">
-      <div class="prop-container">
-        <p>&copy; 2026 Premium Property Depot LLP. All Rights Reserved.</p>
-      </div>
-    </div>
-  </footer>
+  {shared_footer('../')}
 
   <script>
     function handlePropSubmit(event, projectName) {{
