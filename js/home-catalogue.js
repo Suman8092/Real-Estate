@@ -434,11 +434,11 @@ export default [
     "priceNote": "Vaastu-compliant residences with 75% green open spaces in prime Sector 1.",
     "bhk": "2, 3 & 4 BHK Eco-Homes",
     "description": "Express Astra in Sector 1 Greater Noida West offers 3-side open residences surrounded by lush zen gardens and panoramic views of Hindon green belt.",
-    "image": "images/v3.jpg",
+    "image": "images/express-astra.webp",
     "href": "properties/project-express-astra.html",
     "categoryHref": "properties/project-express-astra.html",
     "gallery": [
-      "images/v3.jpg",
+      "images/express-astra.webp",
       "images/v4.jpg",
       "images/h41.jpg"
     ]
