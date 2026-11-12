@@ -1037,8 +1037,8 @@ properties = [
         "superArea": "1,350 – 1,775 sq. ft.",
         "possessionDate": "June 2027",
         "reraNumber": "UPRERAPRJ677297",
-        "image": "images/h41.jpg",
-        "gallery": ["images/h41.jpg", "images/h42.jpg", "images/h44.jpg"],
+        "image": "images/ace-starlit-updated-cover.webp",
+        "gallery": ["images/ace-starlit-updated-cover.webp", "images/h42.jpg", "images/h44.jpg"],
         "overview": "ACE Starlit is an iconic architectural masterpiece located on the Noida Expressway in Sector 152. Known for its signature glass facade, grand arrival court, and luxury club.",
         "description": "Combining contemporary aesthetics with thoughtful privacy, ACE Starlit offers corner-facing apartments with deep balconies overlooking expressway greens and golf courses.",
         "highlights": [
@@ -1090,8 +1090,8 @@ properties = [
         "superArea": "1,720 – 2,690 sq. ft.",
         "possessionDate": "September 2027",
         "reraNumber": "UPRERAPRJ719468",
-        "image": "images/h44.jpg",
-        "gallery": ["images/h44.jpg", "images/h45.jpg", "images/h48.jpg"],
+        "image": "images/crc-maesta-updated-cover.webp",
+        "gallery": ["images/crc-maesta-updated-cover.webp", "images/h45.jpg", "images/h48.jpg"],
         "overview": "CRC Maesta is a modern luxury high-rise development in Sector 1 Greater Noida West, offering thoughtfully planned 3 and 4 BHK residences with deep running balconies.",
         "description": "Designed by renowned Hafeez Contractor, CRC Maesta features a sky club, panoramic observation decks, sports academies, and high-efficiency floor plates.",
         "highlights": [

@@ -458,11 +458,11 @@ export default [
     "priceNote": "Iconic glass-facade towers on Noida Expressway with panoramic views.",
     "bhk": "2 & 3 BHK Luxury Residences",
     "description": "ACE Starlit is an iconic architectural masterpiece located on the Noida Expressway in Sector 152. Known for its signature glass facade, grand arrival court, and luxury club.",
-    "image": "images/h41.jpg",
+    "image": "images/ace-starlit-updated-cover.webp",
     "href": "properties/project-ace-starlit.html",
     "categoryHref": "properties/project-ace-starlit.html",
     "gallery": [
-      "images/h41.jpg",
+      "images/ace-starlit-updated-cover.webp",
       "images/h42.jpg",
       "images/h44.jpg"
     ]
@@ -482,11 +482,11 @@ export default [
     "priceNote": "Ultra-spacious balconies and imported marble finishes in prime Sector 1.",
     "bhk": "3 & 4 BHK Luxury Residences",
     "description": "CRC Maesta is a modern luxury high-rise development in Sector 1 Greater Noida West, offering thoughtfully planned 3 and 4 BHK residences with deep running balconies.",
-    "image": "images/h44.jpg",
+    "image": "images/crc-maesta-updated-cover.webp",
     "href": "properties/project-crc-maesta.html",
     "categoryHref": "properties/project-crc-maesta.html",
     "gallery": [
-      "images/h44.jpg",
+      "images/crc-maesta-updated-cover.webp",
       "images/h45.jpg",
       "images/h48.jpg"
     ]
