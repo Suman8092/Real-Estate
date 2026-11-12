@@ -36,6 +36,12 @@
     .pp-catalogue-copy { padding: 16px; }
     .pp-catalogue-copy h2 { font-size: 17px; font-weight: 600; margin: 0 0 6px; }
     .pp-catalogue-copy p { font-size: 14px; color: #4c4b47; margin: 0; }
+    @media (max-width: 639px) {
+      .pp-catalogue-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+      .pp-catalogue-copy { padding: 10px; overflow-wrap: anywhere; }
+      .pp-catalogue-copy h2 { font-size: 15px; }
+      .pp-catalogue-copy p { font-size: 12px; }
+    }
   </style>
 </head>
 <body class="bg-gray-100 antialiased font-sans flex flex-col min-h-screen text-gray-800">
