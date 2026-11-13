@@ -984,8 +984,8 @@ properties = [
         "superArea": "1,150 – 2,005 sq. ft.",
         "possessionDate": "March 2026",
         "reraNumber": "UPRERAPRJ4796",
-        "image": "images/v3.jpg",
-        "gallery": ["images/v3.jpg", "images/v4.jpg", "images/h41.jpg"],
+        "image": "images/express-astra.webp",
+        "gallery": ["images/express-astra.webp", "images/v4.jpg", "images/h41.jpg"],
         "overview": "Express Astra in Sector 1 Greater Noida West offers 3-side open residences surrounded by lush zen gardens and panoramic views of Hindon green belt.",
         "description": "Engineered for sustainable urban families, Express Astra incorporates rainwater recharging, solar-assisted common illumination, and ultra-spacious layouts.",
         "highlights": [

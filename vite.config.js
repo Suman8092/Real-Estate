@@ -37,6 +37,7 @@ export default defineConfig({
         about: resolve(__dirname, 'about.html'),
         contact: resolve(__dirname, 'contact.html'),
         gallery: resolve(__dirname, 'gallery.html'),
+        properties: resolve(__dirname, 'properties.html'),
         residential: resolve(__dirname, 'residential.html'),
         commercial: resolve(__dirname, 'commercial.html'),
         farmhouses: resolve(__dirname, 'farmhouses.html'),

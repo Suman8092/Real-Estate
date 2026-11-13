@@ -22,3 +22,7 @@
     height: 46px;
   }
 }
+
+#nav-menu .pp-properties-split,#mobile-menu .pp-properties-split{display:grid;grid-template-columns:1fr auto;align-items:center}
+#mobile-menu .pp-properties-split>.mobile-submenu{grid-column:1/-1}
+#mobile-menu .pp-properties-split>.mobile-submenu-toggle{width:auto}

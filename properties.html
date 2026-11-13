@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Properties | Premium Property Depot</title>
+  <meta name="description" content="Browse all listed Premium Property Depot projects and view property details, photos and locations." />
+  <link rel="icon" type="image/png" href="images/peminum_logo_-png.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/legacy/utilities.css" />
+  <link rel="stylesheet" href="css/legacy/custom.css" />
+  <link rel="stylesheet" href="css/header-branding.css" />
+  <link rel="stylesheet" href="css/legacy/site-identity.css" />
+
+  <!-- production-seo:start -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Premium Properties" />
+  <meta property="og:title" content="Properties | Premium Property Depot" />
+  <meta property="og:description" content="Browse all listed Premium Property Depot projects and view property details, photos and locations." />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta property="og:image:alt" content="Premium Property Depot LLP logo" />
+  <!-- production-seo:end -->
+  <link rel="stylesheet" href="css/shared-footer.css" />
+  <style>
+    .pp-catalogue { width: min(1200px, calc(100% - 40px)); margin: 0 auto; padding: clamp(28px, 5vw, 64px) 0; }
+    .pp-catalogue h1 { margin: 0 0 24px; font-size: clamp(28px, 4vw, 44px); font-weight: 600; }
+    .pp-catalogue-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)); gap: 20px; }
+    .pp-catalogue-card { min-width: 0; background: #fff; border: 1px solid #d8d8d8; border-radius: 10px; }
+    .pp-catalogue-card a { display: block; height: 100%; color: #000; border-radius: inherit; }
+    .pp-catalogue-card a:focus-visible { outline: 2px solid #9a6c14; outline-offset: 3px; }
+    .pp-catalogue-card a:hover h2 { color: #9a6c14; }
+    .pp-catalogue-card img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 9px 9px 0 0; }
+    .pp-catalogue-copy { padding: 16px; }
+    .pp-catalogue-copy h2 { font-size: 17px; font-weight: 600; margin: 0 0 6px; }
+    .pp-catalogue-copy p { font-size: 14px; color: #4c4b47; margin: 0; }
+    @media (max-width: 639px) {
+      .pp-catalogue-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+      .pp-catalogue-copy { padding: 10px; overflow-wrap: anywhere; }
+      .pp-catalogue-copy h2 { font-size: 15px; }
+      .pp-catalogue-copy p { font-size: 12px; }
+    }
+  </style>
+</head>
+<body class="bg-gray-100 antialiased font-sans flex flex-col min-h-screen text-gray-800">
+
+  <!-- HEADER -->
+  <header class="sticky top-0 z-50 bg-white text-gray-800 shadow-sm border-b border-gray-100" role="banner">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex items-center justify-between">
+<!-- LOGO -->
+<div class="flex items-center gap-2 sm:gap-3 site-header-brand"><a aria-label="Premium Properties — Home" class="site-header-brand-link" href="index.html"><img alt="Premium Property Depot logo" class="site-header-brand-image" decoding="async" fetchpriority="high" height="257" src="images/premium-property-depot-logo.png" width="971"/></a></div>
+<!-- MOBILE TOGGLE BUTTON -->
+<button aria-label="Toggle navigation menu" class="lg:hidden p-2 rounded-md text-gray-700 hover:text-blue-900 hover:bg-gray-100 transition-colors focus:outline-none focus:ring-2 focus:ring-yellow-400" id="menu-toggle">
+<svg class="w-7 h-7" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<!-- DESKTOP NAVIGATION -->
+<nav aria-label="Main navigation" class="hidden lg:flex items-center space-x-1 xl:space-x-2" id="nav-menu" role="navigation">
+<a class="px-2 py-2 text-sm font-medium text-gray-700 hover:text-blue-900 transition-colors nav-link" href="index.html">Home</a>
+<a class="px-2 py-2 text-sm font-medium text-gray-700 hover:text-blue-900 transition-colors nav-link" href="about.html">About Us</a>
+<a class="px-2 py-2 text-sm font-medium text-gray-700 hover:text-blue-900 transition-colors nav-link" href="gallery.html">Gallery</a>
+<!-- PROPERTIES DROPDOWN -->
+<div class="group relative inline-block pp-properties-split">
+<a class="flex items-center px-2 py-2 text-sm font-medium text-gray-700 hover:text-blue-900 transition-colors nav-link" href="properties.html" aria-current="page">Properties</a>
+<button aria-label="Toggle property categories" aria-expanded="false" aria-haspopup="true" class="flex items-center gap-1 px-2 py-2 text-sm font-medium text-gray-700 hover:text-blue-900 transition-colors nav-link" type="button"><svg class="w-4 h-4 transition-transform duration-200 group-hover:rotate-180 text-gray-500 group-hover:text-blue-900" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<!-- Dropdown Panel -->
+<div class="absolute top-full left-0 pt-2 w-48 opacity-0 invisible group-hover:visible group-hover:opacity-100 transition-all duration-300 translate-y-2 group-hover:translate-y-0 z-50">
+<div class="bg-white rounded-lg shadow-xl border border-gray-100 p-2 flex flex-col gap-1">
+              <a class="block px-4 py-2 text-sm font-medium text-gray-700 rounded-md hover:bg-blue-50 hover:text-blue-900 transition-colors" href="residential.html">Residential</a>
+              <a class="block px-4 py-2 text-sm font-medium text-gray-700 rounded-md hover:bg-blue-50 hover:text-blue-900 transition-colors" href="commercial.html">Commercial</a>
+              <a class="block px-4 py-2 text-sm font-medium text-gray-700 rounded-md hover:bg-blue-50 hover:text-blue-900 transition-colors" href="farmhouses.html">Farm Houses</a>
+              <a class="block px-4 py-2 text-sm font-medium text-gray-700 rounded-md hover:bg-blue-50 hover:text-blue-900 transition-colors" href="vacant-plots.html">Vacant Plots</a>
+              <a class="block px-4 py-2 text-sm font-medium text-gray-700 rounded-md hover:bg-blue-50 hover:text-blue-900 transition-colors" href="industrial.html">Industrial</a>
+</div>
+</div>
+</div>
+<!-- GALLERY -->
+
+<!-- CONTACT CTA BUTTON -->
+<div class="pl-2 xl:pl-4">
+<a class="inline-flex items-center justify-center px-5 py-2 text-sm font-bold text-blue-900 bg-yellow-400 rounded-full shadow-md hover:bg-yellow-300 hover:shadow-lg transition-all duration-300 btn-yellow" href="contact.html">
+            Contact
+          </a>
+</div>
+</nav>
+</div>
+</header>
+
+<!-- MOBILE MENU OVERLAY -->
+<div class="fixed inset-0 bg-black/60 backdrop-blur-sm z-40 hidden opacity-0 transition-opacity duration-300" id="mobile-overlay"></div>
+<!-- MOBILE MENU (SLIDE-IN RIGHT) -->
+<div class="fixed top-0 right-0 h-full w-72 max-w-full bg-white text-gray-800 z-50 transform translate-x-full transition-transform duration-300 shadow-2xl flex flex-col lg:hidden border-l border-gray-100" id="mobile-menu">
+<div class="flex items-center justify-between p-4 border-b border-gray-100">
+<div class="flex items-center gap-2">
+<img loading="lazy" decoding="async" width="640" height="430" alt="Logo" class="h-6 w-auto object-contain" src="images/premium-property-depot-logo.png"/>
+</div>
+<button aria-label="Close menu" class="p-2 rounded-full text-gray-500 hover:text-gray-800 hover:bg-gray-100 transition-colors" id="menu-close">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+<div class="flex-1 overflow-y-auto p-4 space-y-2">
+<a class="block px-4 py-3 text-base font-medium rounded-lg text-gray-700 hover:bg-gray-100 hover:text-blue-900 transition-colors" href="index.html">Home</a>
+<!-- MOBILE: ABOUT US DROPDOWN -->
+<a class="block px-4 py-3 text-base font-medium text-gray-700 hover:bg-gray-100 hover:text-blue-900 transition-colors" href="about.html">About Us</a>
+<!-- MOBILE: PROPERTIES DROPDOWN -->
+<div class="pp-properties-split">
+<a class="flex items-center px-4 py-3 text-base font-medium text-gray-700 rounded-lg hover:bg-gray-100 hover:text-blue-900 transition-colors" href="properties.html" aria-current="page">Properties</a>
+<button aria-label="Toggle property categories" aria-expanded="false" aria-haspopup="true" class="mobile-submenu-toggle w-full flex justify-between items-center px-4 py-3 text-base font-medium text-gray-700 rounded-lg hover:bg-gray-100 hover:text-blue-900 transition-colors" type="button"><svg class="w-4 h-4 transition-transform duration-200" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<div class="mobile-submenu flex-col gap-1 pl-4 pr-2 pb-2 mt-1 hidden">
+        <a class="block px-4 py-2 text-sm text-gray-600 rounded-lg hover:bg-blue-50 hover:text-blue-900" href="residential.html">Residential</a>
+        <a class="block px-4 py-2 text-sm text-gray-600 rounded-lg hover:bg-blue-50 hover:text-blue-900" href="commercial.html">Commercial</a>
+        <a class="block px-4 py-2 text-sm text-gray-600 rounded-lg hover:bg-blue-50 hover:text-blue-900" href="farmhouses.html">Farm Houses</a>
+        <a class="block px-4 py-2 text-sm text-gray-600 rounded-lg hover:bg-blue-50 hover:text-blue-900" href="vacant-plots.html">Vacant Plots</a>
+        <a class="block px-4 py-2 text-sm text-gray-600 rounded-lg hover:bg-blue-50 hover:text-blue-900" href="industrial.html">Industrial</a>
+</div>
+</div>
+<a class="block px-4 py-3 text-base font-semibold text-blue-900 rounded-lg" href="gallery.html">Gallery</a>
+</div>
+<div class="p-4 border-t border-gray-100">
+<a class="flex items-center justify-center w-full px-4 py-3 text-base font-bold text-blue-900 bg-yellow-400 rounded-xl shadow-md hover:bg-yellow-300 transition-colors btn-yellow" href="contact.html">
+        Contact Us
+      </a>
+</div>
+</div>
+
+
+
+  <!-- CONTENT -->
+  <main class="pp-catalogue">
+    <h1>Properties</h1>
+    <div class="pp-catalogue-grid">
+      <article class="pp-catalogue-card">
+        <a href="properties/project-vrindaan.html">
+          <img src="images/1.jpg" alt="Vrindaan" width="800" height="600" loading="lazy" decoding="async" />
+          <div class="pp-catalogue-copy">
+            <h2>Vrindaan</h2>
+            <p>Residential Plots &amp; Signature Villas · Vrindavan</p>
+          </div>
+        </a>
+      </article>
+      <article class="pp-catalogue-card">
+        <a href="properties/project-lifestyle-central.html">
+          <img src="images/lifestyle-central-updated-cover.webp" alt="Lifestyle Central" width="800" height="600" loading="lazy" decoding="async" />
+          <div class="pp-catalogue-copy">
+            <h2>Lifestyle Central</h2>
+            <p>Boutique Retail &amp; Hotel Suites · Greater Noida</p>
+          </div>
+        </a>
+      </article>
+      <article class="pp-catalogue-card">
+        <a href="properties/project-casa-corbett.html">
+          <img src="images/casa-corbett-updated-cover.webp" alt="Casa Corbett" width="800" height="600" loading="lazy" decoding="async" />
+          <div class="pp-catalogue-copy">
+            <h2>Casa Corbett</h2>
+            <p>Holiday-home, Villa &amp; Farmhouse Plots · Uttrakhand</p>
+          </div>
+        </a>
+      </article>
+      <article class="pp-catalogue-card">
+        <a href="properties/project-anantara.html">
+          <img src="images/anantara-updated-07.webp" alt="Anantara" width="800" height="600" loading="lazy" decoding="async" />
+          <div class="pp-catalogue-copy">
+            <h2>Anantara</h2>
+            <p>AgriForest Plots &amp; Nature Cottages · Uttrakhand</p>
+          </div>
+        </a>
+      </article>
+      <article class="pp-catalogue-card">
+        <a href="properties/project-vantara-heritage.html">
+          <img src="images/vantara-heritage-cover.webp" alt="Vantara Heritage" width="800" height="600" loading="lazy" decoding="async" />
+          <div class="pp-catalogue-copy">
+            <h2>Vantara Heritage</h2>
+            <p>Villa &amp; Farmhouse Plots · Greater Noida</p>
+          </div>
+        </a>
+      </article>
+      <article class="pp-catalogue-card">
+        <a href="properties/project-aurya-city.html">
+          <img src="images/aurya-city-updated-20.webp" alt="Aurya City" width="800" height="600" loading="lazy" decoding="async" />
+          <div class="pp-catalogue-copy">
+            <h2>Aurya City</h2>
+            <p>Residential Plots &amp; Smart Living · Gujrat</p>
+          </div>
+        </a>
+      </article>
+      <article class="pp-catalogue-card">
+        <a href="properties/project-bnx-group.html">
+          <img src="images/bnx-group-tower.webp" alt="BNX Group (Pride Plaza)" width="800" height="600" loading="lazy" decoding="async" />
+          <div class="pp-catalogue-copy">
+            <h2>BNX Group (Pride Plaza)</h2>
+            <p>Studios, Retail &amp; Hospitality · Greater Noida</p>
+          </div>
+        </a>
+      </article>
+      <article class="pp-catalogue-card">
+        <a href="properties/project-godrej-tropical-isle.html">
+          <img src="images/godrej-tropical-isle.webp" alt="Godrej Tropical Isle" width="800" height="600" loading="lazy" decoding="async" />
+          <div class="pp-catalogue-copy">
+            <h2>Godrej Tropical Isle</h2>
+            <p>Luxury Island-Themed Residences · Noida</p>
+          </div>
+        </a>
+      </article>
+      <article class="pp-catalogue-card">
+        <a href="properties/project-eon-fairfox.html">
+          <img src="images/eon-fairfox.jpeg" alt="EON Fairfox" width="800" height="600" loading="lazy" decoding="async" />
+          <div class="pp-catalogue-copy">
+            <h2>EON Fairfox</h2>
+            <p>Commercial Office Spaces &amp; Retail · Noida</p>
+          </div>
+        </a>
+      </article>
+      <article class="pp-catalogue-card">
+        <a href="properties/project-godrej-south-estate.html">
+          <img src="images/pro1-516x360.jpg" alt="Godrej South Estate - Prima" width="800" height="600" loading="lazy" decoding="async" />
+          <div class="pp-catalogue-copy">
+            <h2>Godrej South Estate - Prima</h2>
+            <p>Super Luxury Residential High-Rise · Delhi</p>
+          </div>
+        </a>
+      </article>
+      <article class="pp-catalogue-card">
+        <a href="properties/project-garur-golf-island.html">
+          <img src="images/pro2-516x360.jpg" alt="Garur Golf Island" width="800" height="600" loading="lazy" decoding="async" />
+          <div class="pp-catalogue-copy">
+            <h2>Garur Golf Island</h2>
+            <p>Ultra-Luxury Golf Facing Residences · Delhi</p>
+          </div>
+        </a>
+      </article>
+      <article class="pp-catalogue-card">
+        <a href="properties/project-tarc-tripundra.html">
+          <img src="images/pro3-516x360.jpg" alt="Tarc Tripundra" width="800" height="600" loading="lazy" decoding="async" />
+          <div class="pp-catalogue-copy">
+            <h2>Tarc Tripundra</h2>
+            <p>Boutique Luxury Residences · Delhi</p>
+          </div>
+        </a>
+      </article>
+      <article class="pp-catalogue-card">
+        <a href="properties/project-godrej-connaught-one.html">
+          <img src="images/pro4-516x360.jpg" alt="Godrej Connaught One" width="800" height="600" loading="lazy" decoding="async" />
+          <div class="pp-catalogue-copy">
+            <h2>Godrej Connaught One</h2>
+            <p>Heritage Elite Luxury Residences · Delhi</p>
+          </div>
+        </a>
+      </article>
+      <article class="pp-catalogue-card">
+        <a href="properties/project-sawasdee-lodhi-greens.html">
+          <img src="images/pro5-516x360.jpg" alt="Sawasdee Lodhi Greens" width="800" height="600" loading="lazy" decoding="async" />
+          <div class="pp-catalogue-copy">
+            <h2>Sawasdee Lodhi Greens</h2>
+            <p>Prime Central Delhi Boutique Homes · Delhi</p>
+          </div>
+        </a>
+      </article>
+      <article class="pp-catalogue-card">
+        <a href="properties/project-risland-sky-mansion.html">
+          <img src="images/risland-sky-mansion.jpg" alt="Risland Sky Mansion" width="800" height="600" loading="lazy" decoding="async" />
+          <div class="pp-catalogue-copy">
+            <h2>Risland Sky Mansion</h2>
+            <p>Ultra-Luxury Penthouse &amp; Mansions · Delhi</p>
+          </div>
+        </a>
+      </article>
+      <article class="pp-catalogue-card">
+        <a href="properties/project-ats-le-grandiose.html">
+          <img src="images/ats-le-grandiose.jpg" alt="ATS Le Grandiose" width="800" height="600" loading="lazy" decoding="async" />
+          <div class="pp-catalogue-copy">
+            <h2>ATS Le Grandiose</h2>
+            <p>Eco-Luxury Spanish Residences · Noida</p>
+          </div>
+        </a>
+      </article>
+      <article class="pp-catalogue-card">
+        <a href="properties/project-eldeco-ballads-of-bliss.html">
+          <img src="images/eldeco-ballads-of-bliss.jpg" alt="Eldeco Ballads of Bliss" width="800" height="600" loading="lazy" decoding="async" />
+          <div class="pp-catalogue-copy">
+            <h2>Eldeco Ballads of Bliss</h2>
+            <p>Premium High-Rise Residences · Noida</p>
+          </div>
+        </a>
+      </article>
+      <article class="pp-catalogue-card">
+        <a href="properties/project-express-astra.html">
+          <img src="images/express-astra.webp" alt="Express Astra" width="800" height="600" loading="lazy" decoding="async" />
+          <div class="pp-catalogue-copy">
+            <h2>Express Astra</h2>
+            <p>Eco-Friendly Modern Residences · Noida</p>
+          </div>
+        </a>
+      </article>
+      <article class="pp-catalogue-card">
+        <a href="properties/project-ace-starlit.html">
+          <img src="images/ace-starlit-updated-cover.webp" alt="ACE Starlit" width="800" height="600" loading="lazy" decoding="async" />
+          <div class="pp-catalogue-copy">
+            <h2>ACE Starlit</h2>
+            <p>Signature Expressway High-Rise · Noida</p>
+          </div>
+        </a>
+      </article>
+      <article class="pp-catalogue-card">
+        <a href="properties/project-crc-maesta.html">
+          <img src="images/crc-maesta-updated-cover.webp" alt="CRC Maesta" width="800" height="600" loading="lazy" decoding="async" />
+          <div class="pp-catalogue-copy">
+            <h2>CRC Maesta</h2>
+            <p>Ultra-Modern High-Rise Living · Noida</p>
+          </div>
+        </a>
+      </article>
+      <article class="pp-catalogue-card">
+        <a href="properties/project-godrej-woodsville.html">
+          <img src="images/p13-516x360.jpg" alt="Godrej Woodsville" width="800" height="600" loading="lazy" decoding="async" />
+          <div class="pp-catalogue-copy">
+            <h2>Godrej Woodsville</h2>
+            <p>Forest-Themed Smart Living · Pune</p>
+          </div>
+        </a>
+      </article>
+      <article class="pp-catalogue-card">
+        <a href="properties/project-kohinoor-presidentia.html">
+          <img src="images/p15-516x360.jpg" alt="Kohinoor Presidentia" width="800" height="600" loading="lazy" decoding="async" />
+          <div class="pp-catalogue-copy">
+            <h2>Kohinoor Presidentia</h2>
+            <p>Sophisticated Urban High-Rise · Pune</p>
+          </div>
+        </a>
+      </article>
+      <article class="pp-catalogue-card">
+        <a href="properties/project-kolte-patil-life-republic.html">
+          <img src="images/p16-516x360.jpg" alt="Kolte Patil Life Republic" width="800" height="600" loading="lazy" decoding="async" />
+          <div class="pp-catalogue-copy">
+            <h2>Kolte Patil Life Republic</h2>
+            <p>390-Acre Integrated Township · Pune</p>
+          </div>
+        </a>
+      </article>
+      <article class="pp-catalogue-card">
+        <a href="properties/project-vtp-sierra.html">
+          <img src="images/p17-516x360.jpg" alt="VTP Sierra" width="800" height="600" loading="lazy" decoding="async" />
+          <div class="pp-catalogue-copy">
+            <h2>VTP Sierra</h2>
+            <p>Maximum Livable Area Residences · Pune</p>
+          </div>
+        </a>
+      </article>
+      <article class="pp-catalogue-card">
+        <a href="properties/project-shapoorji-joyville-sensorium.html">
+          <img src="images/p18-516x360.jpg" alt="Shapoorji Joyville Sensorium" width="800" height="600" loading="lazy" decoding="async" />
+          <div class="pp-catalogue-copy">
+            <h2>Shapoorji Joyville Sensorium</h2>
+            <p>Biophilic Tech-Enabled Living · Pune</p>
+          </div>
+        </a>
+      </article>
+      <article class="pp-catalogue-card">
+        <a href="properties/project-pride-world-city.html">
+          <img src="images/p19-516x360.jpg" alt="Pride World City - Wellington" width="800" height="600" loading="lazy" decoding="async" />
+          <div class="pp-catalogue-copy">
+            <h2>Pride World City - Wellington</h2>
+            <p>400-Acre Mega Township · Pune</p>
+          </div>
+        </a>
+      </article>
+      <article class="pp-catalogue-card">
+        <a href="properties/project-signature-global-twin-tower.html">
+          <img src="images/signature-global-twin-tower.jpg" alt="Signature Global Twin Tower DXP" width="800" height="600" loading="lazy" decoding="async" />
+          <div class="pp-catalogue-copy">
+            <h2>Signature Global Twin Tower DXP</h2>
+            <p>Ultra-Luxury High-Rise Enclave · Gurugram</p>
+          </div>
+        </a>
+      </article>
+      <article class="pp-catalogue-card">
+        <a href="properties/project-bptp-the-amaario.html">
+          <img src="images/bptp-the-amaario.jpg" alt="BPTP The Amaario" width="800" height="600" loading="lazy" decoding="async" />
+          <div class="pp-catalogue-copy">
+            <h2>BPTP The Amaario</h2>
+            <p>Club-Centric Opulent Residences · Gurugram</p>
+          </div>
+        </a>
+      </article>
+      <article class="pp-catalogue-card">
+        <a href="properties/project-elan-the-presidential.html">
+          <img src="images/v2.jpg" alt="Elan The Presidential" width="800" height="600" loading="lazy" decoding="async" />
+          <div class="pp-catalogue-copy">
+            <h2>Elan The Presidential</h2>
+            <p>Presidential Luxury Residences · Gurugram</p>
+          </div>
+        </a>
+      </article>
+      <article class="pp-catalogue-card">
+        <a href="properties/project-whiteland-the-aspen.html">
+          <img src="images/v4.jpg" alt="Whiteland The Aspen" width="800" height="600" loading="lazy" decoding="async" />
+          <div class="pp-catalogue-copy">
+            <h2>Whiteland The Aspen</h2>
+            <p>Resort-Style Forest High-Rise · Gurugram</p>
+          </div>
+        </a>
+      </article>
+      <article class="pp-catalogue-card">
+        <a href="properties/project-krisumi-waterfall.html">
+          <img src="images/h42.jpg" alt="Krisumi Waterfall Residences" width="800" height="600" loading="lazy" decoding="async" />
+          <div class="pp-catalogue-copy">
+            <h2>Krisumi Waterfall Residences</h2>
+            <p>Indo-Japanese Craftsmanship Living · Gurugram</p>
+          </div>
+        </a>
+      </article>
+      <article class="pp-catalogue-card">
+        <a href="properties/project-sobha-city.html">
+          <img src="images/h45.jpg" alt="Sobha City" width="800" height="600" loading="lazy" decoding="async" />
+          <div class="pp-catalogue-copy">
+            <h2>Sobha City</h2>
+            <p>39-Acre Urban Park Oasis · Gurugram</p>
+          </div>
+        </a>
+      </article>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer id="pp-home-footer">
+    <div class="pp-footer-main">
+      <div class="pp-footer-brand">
+        <p>Your Property, Our Priority.</p><a href="index.html"><img alt="Premium Property Depot LLP" height="257"
+            loading="lazy" src="images/premium-property-depot-logo.png" width="971" /></a>
+      </div>
+      <div>
+        <h2>PROPERTIES</h2><a href="properties.html">All Properties</a><a href="residential.html">Residential</a><a href="commercial.html">Commercial</a><a
+          href="farmhouses.html">Farm Houses</a><a href="vacant-plots.html">Vacant Plots</a><a
+          href="industrial.html">Industrial</a>
+      </div>
+      <div>
+        <h2>QUICK LINKS</h2><a href="about.html">About Us</a><a href="properties.html">Properties</a><a href="gallery.html">Gallery</a><a
+          href="contact.html">Contact Us</a><a data-home-anchor="testimonials"
+          href="index.html#testimonials">Testimonials</a>
+      </div>
+      <div class="pp-footer-reach">
+        <div class="pp-footer-contact">
+          <h2>CONTACT US</h2><a href="tel:+919415378938">+91 9415378938</a><a href="tel:+919305486716">+91
+            9305486716</a><a href="mailto:info@premiumpropertydepot.com">info@premiumpropertydepot.com</a>
+        </div>
+        <div class="pp-footer-address">
+          <h2>OUR ADDRESS</h2>
+          <p>1401D, EON Fairfax, Sector 140A,<br />Noida, Uttar Pradesh</p>
+        </div>
+      </div>
+      <div class="pp-footer-locations">
+        <h2>PROJECT LOCATIONS</h2><a data-home-city="Delhi" href="index.html#projects">Delhi</a><a data-home-city="Noida" href="index.html#projects">Noida</a><a data-home-city="Greater Noida" href="index.html#projects">Greater Noida</a><a data-home-city="Gurugram" href="index.html#projects">Gurugram</a><a data-home-city="Vrindavan" href="index.html#projects">Vrindavan</a><a data-home-city="Uttrakhand" href="index.html#projects">Uttrakhand</a><a data-home-city="Gujrat" href="index.html#projects">Gujrat</a><a data-home-city="Haryana" href="index.html#projects">Haryana</a><a data-home-city="Pune" href="index.html#projects">Pune</a>
+      </div>
+    </div>
+    <div class="pp-footer-bottom">
+      <p>BUILDING TRUST. DELIVERING VALUE.</p>
+      <p>Copyright © 2026. All Rights Reserved</p>
+    </div>
+  </footer>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

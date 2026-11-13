@@ -65,7 +65,7 @@ const command = resolve('scripts/seo.mjs');
 const env = { ...process.env, SITE_URL: 'https://production-fixture.test/estate/' };
 execFileSync(process.execPath, [command], { cwd: fixture, env, stdio: 'pipe' });
 const sitemap = readFileSync(join(fixture, 'public/sitemap.xml'), 'utf8');
-assert.equal([...sitemap.matchAll(/<url>/g)].length, 9);
+assert.equal([...sitemap.matchAll(/<url>/g)].length, 10);
 assert(sitemap.includes('https://production-fixture.test/estate/residential.html'));
 const fixtureHome = readFileSync(join(fixture, 'index.html'), 'utf8');
 assert(fixtureHome.includes('rel="canonical" href="https://production-fixture.test/estate/"'));

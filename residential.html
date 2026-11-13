@@ -25,7 +25,7 @@
   <meta name="twitter:card" content="summary_large_image" />
   <meta property="og:image:alt" content="Premium Property Depot LLP logo" />
   <!-- production-seo:end -->
-  <link rel="stylesheet" href="css/shared-footer.css"/>
+  <link rel="stylesheet" href="css/shared-footer.css" />
 </head>
 <body class="bg-gray-100 antialiased font-sans flex flex-col min-h-screen text-gray-800">
 
@@ -44,11 +44,11 @@
 <nav aria-label="Main navigation" class="hidden lg:flex items-center space-x-1 xl:space-x-2" id="nav-menu" role="navigation">
 <a class="px-2 py-2 text-sm font-medium text-gray-700 hover:text-blue-900 transition-colors nav-link" href="index.html">Home</a>
 <a class="px-2 py-2 text-sm font-medium text-gray-700 hover:text-blue-900 transition-colors nav-link" href="about.html">About Us</a>
+<a class="px-2 py-2 text-sm font-medium text-gray-700 hover:text-blue-900 transition-colors nav-link" href="gallery.html">Gallery</a>
 <!-- PROPERTIES DROPDOWN -->
-<div class="group relative inline-block">
-<button aria-current="true" aria-expanded="false" aria-haspopup="true" class="flex items-center gap-1 px-2 py-2 text-sm font-semibold text-blue-900 hover:text-blue-900 transition-colors nav-link active" type="button">
-            Properties
-            <svg class="w-4 h-4 transition-transform duration-200 group-hover:rotate-180 text-blue-900" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<div class="group relative inline-block pp-properties-split">
+<a class="flex items-center px-2 py-2 text-sm font-semibold text-blue-900 hover:text-blue-900 transition-colors nav-link active" href="properties.html">Properties</a>
+<button aria-label="Toggle property categories" aria-current="true" aria-expanded="false" aria-haspopup="true" class="flex items-center gap-1 px-2 py-2 text-sm font-semibold text-blue-900 hover:text-blue-900 transition-colors nav-link active" type="button"><svg class="w-4 h-4 transition-transform duration-200 group-hover:rotate-180 text-blue-900" fill="none" stroke="currentColor" viewbox="0 0 24 24">
 <path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
 </svg>
 </button>
@@ -94,10 +94,9 @@
 <!-- MOBILE: ABOUT US DROPDOWN -->
 <a class="block px-4 py-3 text-base font-medium text-gray-700 hover:bg-gray-100 hover:text-blue-900 transition-colors" href="about.html">About Us</a>
 <!-- MOBILE: PROPERTIES DROPDOWN -->
-<div>
-<button aria-current="true" aria-expanded="true" aria-haspopup="true" class="mobile-submenu-toggle w-full flex justify-between items-center px-4 py-3 text-base font-semibold rounded-lg transition-colors text-blue-900 active" type="button">
-          Properties
-          <svg class="w-4 h-4 transition-transform duration-200 rotate-180" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<div class="pp-properties-split">
+<a class="flex items-center px-4 py-3 text-base font-semibold rounded-lg transition-colors text-blue-900 active" href="properties.html">Properties</a>
+<button aria-label="Toggle property categories" aria-current="true" aria-expanded="true" aria-haspopup="true" class="mobile-submenu-toggle w-full flex justify-between items-center px-4 py-3 text-base font-semibold rounded-lg transition-colors text-blue-900 active" type="button"><svg class="w-4 h-4 transition-transform duration-200 rotate-180" fill="none" stroke="currentColor" viewbox="0 0 24 24">
 <path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
 </svg>
 </button>
