@@ -36,3 +36,59 @@ body>footer#pp-home-footer.site-footer{background:#FFFFFF!important;color:#00000
 #pp-home-footer.site-footer .sf-design-credit a {
   font-weight: 700;
 }
+
+/* Desktop footer uses a horizontal brand, navigation and address layout. */
+@media (min-width: 1024px) {
+  body > footer#pp-home-footer.site-footer {
+    padding: 64px 40px 28px !important;
+  }
+  #pp-home-footer.site-footer .sf-inner {
+    max-width: 1320px;
+    display: grid;
+    grid-template-columns: minmax(280px, 1.4fr) minmax(150px, .8fr) minmax(150px, .8fr) minmax(230px, 1.2fr);
+    column-gap: 44px;
+    align-items: start;
+  }
+  #pp-home-footer.site-footer .sf-brand {
+    margin: 0;
+    text-align: left;
+  }
+  #pp-home-footer.site-footer .sf-tagline {
+    font-size: 20px;
+    white-space: normal;
+    max-width: 310px;
+    margin: 0 0 30px;
+  }
+  #pp-home-footer.site-footer .sf-brand > a {
+    justify-content: flex-start;
+  }
+  #pp-home-footer.site-footer .sf-brand .sf-logo {
+    margin: 0;
+    width: 240px;
+  }
+  #pp-home-footer.site-footer .sf-grid {
+    display: contents;
+  }
+  #pp-home-footer.site-footer .sf-grid > div {
+    text-align: left;
+  }
+  #pp-home-footer.site-footer .sf-links {
+    align-items: flex-start;
+    gap: 18px;
+  }
+  #pp-home-footer.site-footer .sf-address p {
+    margin: 0;
+    max-width: 300px;
+    line-height: 1.9;
+  }
+  #pp-home-footer.site-footer .sf-bottom {
+    grid-column: 1 / -1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    margin-top: 52px;
+    padding-top: 24px;
+    text-align: left;
+  }
+}
