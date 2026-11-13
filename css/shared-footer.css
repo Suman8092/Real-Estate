@@ -22,3 +22,12 @@ body>footer#pp-home-footer.site-footer{background:#FFFFFF!important;color:#00000
 #pp-home-footer.site-footer .sf-brand>a{display:flex;align-items:center;justify-content:center;width:100%;margin:0 auto;padding:0}
 #pp-home-footer.site-footer .sf-brand .sf-logo{display:block;flex:0 1 240px;width:240px;max-width:100%;margin:0 auto}
 @media(max-width:639px){#pp-home-footer.site-footer .sf-brand .sf-logo{flex-basis:230px;width:230px}}
+
+/* Keep the address close to the footer links after removing contact details. */
+#pp-home-footer.site-footer .sf-contact .sf-address{margin-top:0}
+@media(max-width:639px){
+  #pp-home-footer.site-footer .sf-grid{row-gap:24px}
+  #pp-home-footer.site-footer .sf-contact{padding-top:0}
+}
+
+#pp-home-footer.site-footer .sf-tagline{max-width:none;white-space:nowrap;font-size:clamp(16px,4.6vw,24px)}
