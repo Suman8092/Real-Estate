@@ -43,7 +43,11 @@ const content = home.match(/<div class="hp-home">([\s\S]*?)<\/template>/)[1];
 assert.equal([...content.matchAll(/<section\b/g)].length, 8, 'Preserve eight homepage sections');
 const main = readFileSync('js/main.js', 'utf8');
 assert(!main.includes('has been received'), 'Forms must not claim server delivery');
-assert(main.includes("getElementById('contact-page-form')"), 'Contact form handler missing');
+for (const [file, id] of [['index.html', 'contactForm'], ['contact.html', 'contact-page-form']]) {
+  const html = readFileSync(file, 'utf8');
+  const tag = [...html.matchAll(/<form\b[^>]*>/g)].map(match => match[0]).find(tag => tag.includes(`id="${id}"`));
+  assert(tag?.includes('action="https://formsubmit.co/info@premiumpropertydepot.com"') && tag.includes('method="POST"'), `${file}: email submission endpoint missing`);
+}
 assert(existsSync('public/robots.txt'), 'robots.txt missing');
 if (process.env.SITE_URL) assert(existsSync('public/sitemap.xml'), 'sitemap missing');
 for (const dir of ['js', 'css']) for (const file of readdirSync(dir).filter(file => /\.(js|css)$/.test(file))) {

@@ -70,19 +70,6 @@ export function initHomeWidgets(root){
     form.querySelector('[data-download-draft]').addEventListener('click',()=>{if(!form.reportValidity())return;const blob=new Blob([JSON.stringify(getDraft(),null,2)],{type:'application/json'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='property-draft.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);});
   }
   document.querySelectorAll('[data-submit-property]').forEach(button=>button.addEventListener('click',propertyDraft));
-  // Project photos get the reference's full-size gallery widget as well as inline story controls.
-  root.querySelectorAll('.pp-gallery').forEach(gallery=>{
-    const project=catalogue[Number(gallery.closest('[data-panel]').dataset.panel)];
-    if(!project?.gallery.length)return;
-    const button=document.createElement('button');button.type='button';button.className='pp-open-gallery';button.setAttribute('aria-label',`View all ${project.name} photos`);button.innerHTML=icon('zoom',17)+'<span>View Photos</span>';gallery.append(button);
-    button.addEventListener('click',()=>{
-      let index=0;open(project.name+' — Photos','<div class="pp-photo-viewer"><button type="button" class="pp-viewer-prev" aria-label="Previous photo">‹</button><img alt=""/><button type="button" class="pp-viewer-next" aria-label="Next photo">›</button></div><div class="pp-viewer-thumbs"></div><p class="pp-viewer-count" role="status"></p>');
-      const img=content.querySelector('.pp-photo-viewer img'),rail=content.querySelector('.pp-viewer-thumbs');
-      const render=()=>{img.src=homeMedia(project.gallery[index]);img.alt=project.name+' — photo '+(index+1);rail.querySelectorAll('button').forEach((b,i)=>b.setAttribute('aria-pressed',String(i===index)));content.querySelector('.pp-viewer-count').textContent=`${index+1} / ${project.gallery.length}`;};
-      project.gallery.forEach((path,i)=>{const thumb=document.createElement('button');thumb.type='button';thumb.setAttribute('aria-label','View photo '+(i+1));thumb.innerHTML=`<img src="${homeMedia(path)}" alt="${safe(project.name)}"/>`;thumb.addEventListener('click',()=>{index=i;render();});rail.append(thumb);});
-      content.querySelector('.pp-viewer-prev').addEventListener('click',()=>{index=(index-1+project.gallery.length)%project.gallery.length;render();});content.querySelector('.pp-viewer-next').addEventListener('click',()=>{index=(index+1)%project.gallery.length;render();});render();
-    });
-  });
   // Expand the reference-style comparison dock to show each selected listing.
   const dock=root.querySelector('.pp-compare-dock');const chips=document.createElement('div');chips.className='pp-compare-chips';dock.prepend(chips);
   const updateChips=()=>{chips.replaceChildren();root.querySelectorAll('[data-compare]:checked').forEach(input=>{const p=catalogue.find(p=>p.slug===input.dataset.compare);const chip=document.createElement('div');chip.className='pp-compare-chip';chip.innerHTML=(p.image?`<img src="${homeMedia(p.image)}" alt="${safe(p.name)}"/>`:'')+`<span>${safe(p.name)}</span><button type="button" aria-label="Remove ${safe(p.name)} from comparison">×</button>`;chip.querySelector('button').addEventListener('click',()=>{input.checked=false;input.dispatchEvent(new Event('change',{bubbles:true}));updateChips();});chips.append(chip);});};

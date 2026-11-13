@@ -139,28 +139,10 @@ if (root) {
     root.getElementById('project').value = button.dataset.enquire;
     openHomeEnquiry(button.dataset.enquire, root);
   }));
-  // Preserve the existing validated email-draft enquiry action; no server delivery is claimed.
-  const form = root.getElementById('contactForm');
-  const name = root.getElementById('name');
+  // Native POST sends enquiries through FormSubmit, retaining browser validation.
   const phone = root.getElementById('mobile');
-  const email = root.getElementById('email');
-  const project = root.getElementById('project');
-  const consent = root.querySelector('.mpa-consent-box');
-  const status = root.getElementById('successMessage');
   phone.addEventListener('input', () => { phone.value = phone.value.replace(/[^0-9]/g, '').slice(0, 10); });
-  form.addEventListener('submit', event => {
-    event.preventDefault();
-    if (!form.reportValidity()) return;
-    const subject = `Property enquiry: ${project.value}`;
-    const body = [`Name: ${name.value.trim()}`, `Phone: ${phone.value.trim()}`, `Email: ${email.value.trim()}`, `Project: ${project.value}`].join('\r\n');
-    try {
-      window.open(`mailto:info@premiumpropertydepot.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`, '_self');
-      status.textContent = 'Your email app will open with your enquiry. You can also call +91 9415378938 or +91 9305486716.';
-    } catch {
-      status.textContent = 'Please email info@premiumpropertydepot.com or call +91 9415378938 to send your enquiry.';
-    }
-    status.hidden = false;
-  });
+
 }
 // Homepage-only native navigation: Escape closes open menus and returns focus.
 const homeHeader = document.getElementById('pp-home-header');

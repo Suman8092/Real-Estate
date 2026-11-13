@@ -161,20 +161,7 @@ document.addEventListener('DOMContentLoaded', () => {
   function openEmailDraft(subject, body) {
     window.open(`mailto:info@premiumpropertydepot.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`, '_self');
   }
-  const contactForm = document.getElementById('contact-page-form');
-  if (contactForm) {
-    const status = document.createElement('p');
-    status.setAttribute('role', 'status');
-    status.className = 'text-sm mt-4';
-    contactForm.after(status);
-    contactForm.addEventListener('submit', event => {
-      event.preventDefault();
-      if (!contactForm.reportValidity()) return;
-      const data = new FormData(contactForm);
-      openEmailDraft('Property enquiry', ['name', 'email', 'phone', 'message'].map(key => `${key}: ${String(data.get(key) || '').trim()}`).join('\r\n'));
-      status.textContent = 'Complete your enquiry in your email application, or contact info@premiumpropertydepot.com / +91 9415378938.';
-    });
-  }
+  // Contact-page form submits directly to its configured email endpoint.
 
   // Toast notification helper
   function showToast(msg) {

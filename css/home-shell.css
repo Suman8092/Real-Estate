@@ -148,3 +148,5 @@ body[data-home-design="project-first"]>#pp-home-footer{background:#FFFFFF!import
 #pp-home-footer .pp-footer-bottom>p{width:100%;max-width:none;text-align:center;margin:0}
 #pp-home-footer .pp-footer-bottom>a{margin:0 auto}
 }
+
+@media(max-width:639px){#pp-home-footer .pp-footer-main a[href="industrial.html"]{display:none}}
